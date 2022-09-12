@@ -1,9 +1,16 @@
 .footer-container{
     display:flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 0 5rem;
     align-items: center;
-    background-color: #603FC1;
+    background-color: #581845;
 }
-.footer-info{
-    color: rgb(241, 20, 156);
+.footer-container >h3{
+    color: #f2ca27;
+}
+.footer-info >h3  { 
+    color: #f2ca27;
+}
+.footer-info >p { 
+    color: #e8e8e8;
 }
