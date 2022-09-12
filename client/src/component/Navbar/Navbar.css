@@ -1,7 +1,8 @@
  .navigation{
   display:flex;
-  background-color:#603FC1;
-  justify-content: space-between;  align-content: space-between;
+  background-color:#581845;;
+  justify-content: space-between; 
+   align-content: space-between;
  }
  
  .logo{
@@ -9,11 +10,8 @@
   height:8em;
  }
  
- .h1{
-display:flex;
-text-align: center;
-justify-items: center;
-}
+
+
 .menu-profile{
   background-color: none;
 }

@@ -9,7 +9,6 @@ export default function Navbar() {
         {/*casa de la mujer*/}
       </a>
       <h1>Acción Femenina</h1>
-
       <div className="navigation-menu">
         <ul className="menu-container ">
           {" "}
