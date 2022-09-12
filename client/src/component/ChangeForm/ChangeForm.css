@@ -1,0 +1,34 @@
+.btn-switch-form{
+    background-color: rgba(147,147,147, 0.7);
+    height: 40vh;
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 1rem;
+    padding: 2rem 2rem; 
+}
+
+.btn-switch-form>button{
+    height: 15vh;
+    width: 8vw;
+    border: 0.2em solid black;
+    border-radius: 1rem;
+    background-color: #fefefe;
+    font-weight: bold;
+
+}
+
+.btn-switch-form>button:hover{
+    background-color: rgba(160,44,125, 0.9);
+    transform: translateY(-3px);
+    color: #e8e8e8;
+    box-shadow: 0.5rem 0.5rem rgba(112,31,88, 0.5);
+}
+
+.btn-switch-form>button:active{
+    transform: translateY(-1px);
+    box-shadow: none;
+}

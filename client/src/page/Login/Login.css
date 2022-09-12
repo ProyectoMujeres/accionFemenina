@@ -1,0 +1,98 @@
+.login-section{
+    height: 83vh;
+    overflow: auto; 
+    display: flex;
+    justify-content: center;
+}
+
+.login-form-all{
+    position: relative;
+    background-color: #fefefe;
+    border: 0.05rem solid black;
+    margin: auto;
+    padding: auto;
+    height: 80vh;
+    width: 90vw;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.login-form-title{
+    text-align: center;
+    background-color: #581845;
+    color: #e8e8e8;
+    margin-top: 2.3rem;
+}
+
+.login-form-container{  
+    height: 70vh;
+    width: 90vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.login-form{
+    background-color: rgba(147,147,147, 0.7);
+    height: 60vh;
+    width: 50vw;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form-content{
+    display: flex;
+    flex-direction: column;  
+    gap: 2rem;
+    font-weight: bold;
+}
+
+.login-form-l-i{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.2rem;
+}
+
+.login-form-l-i>label{
+    font-size: large;
+    color: #A02C7D
+    ;
+}
+
+.login-form-l-i>input{
+    width: 40vw;
+    height: 2.5rem;
+    text-indent: 1rem;
+    border-radius: 0.5rem;
+    color: black;
+    font-weight: bold;
+    border: none;
+}
+
+.login-form-b{
+    align-self: flex-end;
+}
+
+.login-form-b>button{
+    margin-left: 2rem;
+    height: 2.5rem;
+    width: 5rem;
+    font-weight: bold;
+    border-radius: 1rem;
+    background-color: #fefefe;
+    border: 0.1rem solid black;
+}
+
+.login-form-b>button:hover{
+    background-color: rgba(160,44,125, 0.9);
+    transform: translateY(-3px);
+    color: #e8e8e8;
+    box-shadow: 0.5rem 0.5rem rgba(112,31,88, 0.5);
+}
+
+.login-form-b>button:active{
+    transform: translateY(-1px);
+    box-shadow: none;
+}
