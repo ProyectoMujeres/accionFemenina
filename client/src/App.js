@@ -3,6 +3,7 @@ import React from 'react';
 import Navbar from "./component/Navbar/Navbar";
 import Footer from './component/Footer/Footer';
 import './App.css';
+import Login from './page/Login/Login';
 import Register from './page/Register/Register';
 
 export default function App() {

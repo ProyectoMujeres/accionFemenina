@@ -17,7 +17,7 @@ export default function Register() {
           <IoClose/>
         </IconContext.Provider>
       
-        <h2 className='register-form-title'>Formulario para Iniciar sesión</h2>
+        <h2 className='register-form-title'>Formulario para Registrarse</h2>
         
         <section className='register-form-container'>
           <ChangeForm/>
@@ -31,7 +31,7 @@ export default function Register() {
 
               <section className='register-form-l-i'>
                 <label htmlFor='email'>Correo electrónico:</label>
-                <input type='text' placeholder='ejemplo@email.com' name='email' id='email' value={email} onChange={(e)=> setEmail(e.target.value)}/>
+                <input type='email' placeholder='ejemplo@email.com' name='email' id='email' value={email} onChange={(e)=> setEmail(e.target.value)}/>
               </section>
 
               <section className='register-form-l-i'>
@@ -45,9 +45,9 @@ export default function Register() {
               </section>
 
               <section className='register-form-b'>
-                <button>Aceptar</button>
-                <button>Refrescar</button>
-                <button>Cancelar</button>
+                <button type='submit'>Aceptar</button>
+                <button type='reset'>Refrescar</button>
+                <button type='cancel'>Cancelar</button>
               </section> 
             </form>
           </section>

@@ -30,7 +30,7 @@ export default function Login() {
 
               <section className='login-form-l-i'>
                 <label htmlFor='email'>Correo electrónico:</label>
-                <input type='text' placeholder='ejemplo@email.com' name='email' id='email' value={email} onChange={(e)=> setEmail(e.target.value)}/>
+                <input type='email' placeholder='ejemplo@email.com' name='email' id='email' value={email} onChange={(e)=> setEmail(e.target.value)}/>
               </section>
 
               <section className='login-form-l-i'>
@@ -39,8 +39,8 @@ export default function Login() {
               </section>
 
               <section className='login-form-b'>
-                <button>Aceptar</button>
-                <button>Cancelar</button>
+                <button type='submit'>Aceptar</button>
+                <button type='cancel'>Cancelar</button>
               </section> 
             </form>
           </section>
