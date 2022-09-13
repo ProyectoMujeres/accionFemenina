@@ -26,7 +26,7 @@ export default function Register() {
             <form className='register-form-content'>
               <section className='register-form-l-i'>
                 <label htmlFor='name'>Nombre:</label>
-                <input type='text' placeholder='Maria Jose' name='name' id='name' value={name} onChange={(e)=> setName(e.target.value)}/>
+                <input type='text' placeholder='Maria Contee' name='name' id='name' value={name} onChange={(e)=> setName(e.target.value)}/>
               </section>
 
               <section className='register-form-l-i'>
