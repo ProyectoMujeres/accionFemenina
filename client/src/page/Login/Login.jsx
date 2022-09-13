@@ -25,7 +25,7 @@ export default function Login() {
             <form className='login-form-content'>
               <section className='login-form-l-i'>
                 <label htmlFor='name'>Nombre:</label>
-                <input type='text' placeholder='Maria Jose' name='name' id='name' value={user} onChange={(e)=> setUser(e.target.value)}/>
+                <input type='text' placeholder='Maria Contee' name='name' id='name' value={user} onChange={(e)=> setUser(e.target.value)}/>
               </section>
 
               <section className='login-form-l-i'>
