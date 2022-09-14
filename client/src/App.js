@@ -13,8 +13,10 @@ export default function App() {
   return (
     <>
       <Navbar/>
-      <Comment/>
-     <Register/>
+        <Login/>
+        <Register/>
+        <Comment/>
+        <Profile/>
       <Footer/>
     </>
   );
