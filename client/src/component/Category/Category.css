@@ -1,0 +1,17 @@
+.category-container{
+background-color:rgba(147,147,147, 0.7);
+width: 10rem;
+height: 20rem;
+margin-left:2rem;
+margin-bottom: 15rem;
+padding-left:1.5rem;
+
+
+
+}
+
+.category-list>li{
+    list-style: none;
+    text-align: center;
+    margin-right: 2rem;
+}

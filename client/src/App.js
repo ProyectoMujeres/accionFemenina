@@ -6,14 +6,15 @@ import './App.css';
 import Login from './page/Login/Login';
 import Register from './page/Register/Register';
 import Profile from './page/Profile/Profile';
+import Comment from './page/Comments/Comment';
 
 
 export default function App() {
   return (
     <>
       <Navbar/>
-      <Register/>
-      <Profile/>
+      <Comment/>
+     <Register/>
       <Footer/>
     </>
   );
