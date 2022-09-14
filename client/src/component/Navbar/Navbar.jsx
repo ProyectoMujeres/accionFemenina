@@ -1,11 +1,12 @@
 import React from "react";
 import "./Navbar.css";
-import Logowomen from "../../assets/Logowomen.jpg";
+import logowomen from "../../assets/logowomen.jpg";
+import user from"../../assets/user.png";
 
 export default function Navbar() {
   return (
     <nav className="navigation">
-      <a href ="/"> <img src={Logowomen}  alt= "logowomen" className="logo"/>
+      <a href ="/"> <img src={logowomen}  alt= "logowomen" className="logo"/>
         {/*casa de la mujer*/}
       </a>
       <h1>Acción Femenina</h1>
@@ -14,8 +15,7 @@ export default function Navbar() {
           {" "}
           <li className="menu" id="menu">
             {" "}
-            <button className="menu-profile">Avatar
-            </button>
+            <button className="menu-profile"><img src={user}  alt= "user" className="user-icon" /></button>
             <section className="navlink">
               {""}
 
