@@ -2,13 +2,28 @@ import React, { useState } from 'react'
 import './Profile.css'
 import { IoClose } from 'react-icons/io5';
 import { IconContext } from "react-icons";
+import Avatar from "react-avatar-edit";
 
 export default function Profile() {
   const [name, setName] = useState([]);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
+  
+  const [preview, setPreview] = useState(null);
+  function onClose() {
+    setPreview(null);
+  }
+  function onCrop(pv) {
+    setPreview(pv);
+  }
+  function onBeforeFileLoad(elem) {
+    if (elem.target.files[0].size > 71680) {
+      alert("File is too big!");
+      elem.target.value = "";
+    }
+  }
   return (
+  
     <section className="profile-section">
 
       <section className='profile-form-all'>
@@ -21,6 +36,21 @@ export default function Profile() {
         <h2>Bienvenida/o</h2>
         
         <section className='profile-form-container'>
+
+
+    <div>
+      <Avatar
+        width={300}
+        height={300}
+        onCrop={onCrop}
+        onClose={onClose}
+        onBeforeFileLoad={onBeforeFileLoad}
+        src={null}
+      />
+      {preview && <img src={preview} alt="Preview" />}
+    </div>
+);
+
 
         <section className='btn-switch-form'>
             <button>Editar datos de perfil</button>
