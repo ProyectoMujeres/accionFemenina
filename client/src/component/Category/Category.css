@@ -1,17 +1,29 @@
 .category-container{
-background-color:rgba(147,147,147, 0.7);
-width: 10rem;
-height: 20rem;
-margin-left:2rem;
-margin-bottom: 15rem;
-padding-left:1.5rem;
-
-
-
+    width: 15rem;
 }
 
-.category-list>li{
-    list-style: none;
-    text-align: center;
-    margin-right: 2rem;
+.category-list{
+    background-color:rgba(160,44,125, 0.9);
+    font-weight: bold;
+    border-collapse: separate;
+    border-spacing: 0.5rem;
+    border:0.1rem solid black;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+td{
+    border-bottom:1px solid black;
+    color: white;
+}
+
+td:hover{
+    background-color: blanchedalmond; 
+    height: 1.5rem;
+    color: black;
+    border-radius: 0.2rem;
+}
+
+td:active{
+    transform: translateY(2px);
 }
