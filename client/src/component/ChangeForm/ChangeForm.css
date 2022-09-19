@@ -1,23 +1,28 @@
 .btn-switch-form{
     background-color: rgba(147,147,147, 0.7);
-    height: 40vh;
-    width: 15vw;
+    height: 50vh;
+    width: 80vw;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    gap: 2rem;
+    gap: 1.7rem;
     border-radius: 1rem;
-    padding: 2rem 2rem; 
+    padding: 0.5rem 0rem; 
 }
 
 .btn-switch-form>button{
-    height: 15vh;
-    width: 8vw;
+    @media screen and (max-width: 844px) {
+    display:row;
+    height: 8vh;
+    width: 25vw;
     border: 0.2em solid black;
     border-radius: 1rem;
     background-color: #fefefe;
     font-weight: bold;
+    
+        
+    }
 
 }
 
@@ -32,3 +37,4 @@
     transform: translateY(-1px);
     box-shadow: none;
 }
+

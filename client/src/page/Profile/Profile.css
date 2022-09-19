@@ -1,34 +1,45 @@
-.profile-section{
+@media screen and (max-width: 844px) {
+  .profile-section{
     height: 83vh;
     overflow: auto; 
-    display: flex;
+    display:inline-flex;
     justify-content: center;
   }
+}
+
   
   .profile-form-title{
     text-align: center;
     background-color: #581845;
     color: #e8e8e8;
     margin-top: 2.3rem;
+    margin-right: 20px;
   }
   
-  .profile-form-container{  
+  @media screen and (max-width: 844px) {
+    .profile-form-container{  
     height: 70vh;
-    width: 90vw;
-    display: flex;
+    width: 100vw;
+    display:inline-flex;
     justify-content: space-around;
     align-items: center;
-  }
+}
+}
+
   
-  .profile-form{
+   @media screen and (max-width: 844px) {
+     .profile-form{
     background-color: rgba(147,147,147, 0.7);
     height: 60vh;
     width: 50vw;
     border-radius: 1rem;
-    display: flex;
+    display: inline;
     justify-content: center;
     align-items: center;
+    
+  ;
   }
+}
   
   .profile-form-content{
     display: flex;
@@ -53,7 +64,7 @@
   .profile-form-l-i>input{
     width: 40vw;
     height: 2.5rem;
-    text-indent: 1rem;
+    text-indent: 2rem;
     border-radius: 0.5rem;
     color: black;
     font-weight: bold;
@@ -101,8 +112,8 @@
 }
 
 .btn-switch-form>button{
-    height: 15vh;
-    width: 8vw;
+    height: 8vh;
+    width: 25vw;
     border: 0.2em solid black;
     border-radius: 1rem;
     background-color: #fefefe;

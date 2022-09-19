@@ -1,5 +1,6 @@
 .register-section{
-  height: 83vh;
+  height: 90vh;
+  width: 100%;
   overflow: auto; 
   display: flex;
   justify-content: center;
@@ -9,8 +10,8 @@
   position: relative;
   background-color: #fefefe;
   border: 0.05rem solid black;
-  margin: auto;
-  padding: auto;
+
+  padding: 20px;
   height: 80vh;
   width: 90vw;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
@@ -63,7 +64,7 @@
 
 .register-form-l-i>input{
   width: 40vw;
-  height: 2.5rem;
+  height: 2rem;
   text-indent: 1rem;
   border-radius: 0.5rem;
   color: black;
@@ -95,4 +96,11 @@
 .register-form-b>button:active{
   transform: translateY(-1px);
   box-shadow: none;
+}
+
+@media screen and (max-width: 844px) {
+  .login-section {
+   display: flex;
+   
+ }
 }

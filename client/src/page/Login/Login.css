@@ -1,8 +1,12 @@
-.login-section{
+@media screen and (max-width: 844px) {
+    .login-section{
     height: 83vh;
     overflow: auto; 
-    display: flex;
+    display: row;
     justify-content: center;
+    gap:2rem;
+
+}
 }
 
 .login-form-all{
@@ -23,12 +27,14 @@
     margin-top: 2.3rem;
 }
 
-.login-form-container{  
+@media screen and (max-width: 844px) {
+    .login-form-container{  
     height: 70vh;
     width: 90vw;
-    display: flex;
+    display:inline-flex;
     justify-content: space-around;
     align-items: center;
+}
 }
 
 .login-form{
@@ -36,16 +42,18 @@
     height: 60vh;
     width: 50vw;
     border-radius: 1rem;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
 }
 
-.login-form-content{
-    display: flex;
+@media screen and (max-width: 844px) {
+    .login-form-content{
+    display:inline-flex;
     flex-direction: column;  
     gap: 2rem;
     font-weight: bold;
+}
 }
 
 .login-form-l-i{
@@ -69,13 +77,15 @@
     color: black;
     font-weight: bold;
     border: none;
+    
 }
 
 .login-form-b{
     align-self: flex-end;
 }
 
-.login-form-b>button{
+   @media screen and (max-width: 844px) {
+    login-form-b>button{
     margin-left: 2rem;
     height: 2.5rem;
     width: 5rem;
@@ -84,6 +94,7 @@
     background-color: #fefefe;
     border: 0.1rem solid black;
 }
+   }
 
 .login-form-b>button:hover{
     background-color: rgba(160,44,125, 0.9);
@@ -96,3 +107,4 @@
     transform: translateY(-1px);
     box-shadow: none;
 }
+
