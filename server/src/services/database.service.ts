@@ -5,7 +5,8 @@ class Database {
     client: Pool;
     
     constructor(config: any) {
-        this.client = new Pool({connectionString: config.uri , ssl: {rejectUnauthorized: false}});
+        console.log(config.uri)
+        this.client = new Pool({connectionString: config.uri});
         console.log('Connecting to PostgreSQL...');
     }
 
