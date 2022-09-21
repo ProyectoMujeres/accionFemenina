@@ -14,53 +14,11 @@
   background-color:#581845;
   height:4rem;
 }
- 
-.menu-container {
-  list-style-type: none; 
-  margin: 0; 
-  padding: 0;
-} 
- 
-.menu{
-  float: right; 
-}
-
-#menu {
-  display: inline-block; 
-  text-align: center;
-}
-
-.navlink{
-  display: none; 
-  position: absolute; 
-  background-color: rgb(160, 44, 125); 
-  z-index: 3; 
-}
-
-.navlink>p>a{
-  padding: 0.5em 1em; 
-  text-decoration: none;
-  color:white;
-  font-weight: bold;
-}
-
-#menu:hover>.navlink{
-  display: block; 
-}
-
-.navlink>p:hover { 
-  background-color: blanchedalmond; 
-  height: 1.5rem;
-}  
-
-.navlink>p>a:hover{
-  color: black;
-}
 
 /*Responsive NavBar*/
 
 @media (max-width: 844px){
-  .navigation {
+  .navigation{
     display: flex;
     justify-content: space-around; 
     align-items: center; 

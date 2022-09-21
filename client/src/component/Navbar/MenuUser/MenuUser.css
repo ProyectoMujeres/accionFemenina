@@ -1,0 +1,46 @@
+.menu-user-profile{
+  background-color:#581845;
+  height:4rem;
+}
+ 
+.menu-user-container{
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0;
+} 
+ 
+.menu-user{
+  float: right; 
+}
+
+#menu-user{
+  display: inline-block; 
+  text-align: center;
+}
+
+.menu-user-link{
+  display: none; 
+  position: absolute; 
+  background-color: rgb(160, 44, 125); 
+  z-index: 3; 
+}
+
+.menu-user-link>p>a{
+  padding: 0.5em 1em; 
+  text-decoration: none;
+  color:white;
+  font-weight: bold;
+}
+
+#menu-user:hover>.menu-user-link{
+  display: block; 
+}
+
+.menu-user-link>p:hover { 
+  background-color: blanchedalmond; 
+  height: 1.5rem;
+}  
+
+.menu-user-link>p>a:hover{
+  color: black;
+}
