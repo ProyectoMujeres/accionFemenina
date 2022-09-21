@@ -14,11 +14,12 @@ export default function Comment() {
     <section className="comment-container">
       <section className='comment-search-create-section'>
         <button className='comment-create'> 
-        <IconContext.Provider value={{size: "2.5em"}}>
-          <IoCreate/>
-        </IconContext.Provider>
-        Crear publicación
+          <IconContext.Provider value={{size: "2.5em"}}>
+            <IoCreate/>
+          </IconContext.Provider>
+          Crear publicación
         </button>
+
         <Search search={search} searchInput={searchInput} handleSearch={handleSearch}/> 
       </section>
 
@@ -27,10 +28,13 @@ export default function Comment() {
 
         <section className='comment-post'>
           <img src ="" alt= ""/>
-          <p></p>
+
+          <section>
+            <p className='comment-post-name-date'></p>
+            <p className='comment-post-content'></p>
+          </section>
         </section>
       </section>
-
     </section>
   )
 }

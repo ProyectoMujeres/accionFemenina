@@ -5,25 +5,41 @@
 .category-list{
     background-color:rgba(160,44,125, 0.9);
     font-weight: bold;
-    border-collapse: separate;
-    border-spacing: 0.5rem;
     border:0.1rem solid black;
     border-radius: 0.5rem;
     padding: 0.5rem;
 }
 
-td{
-    border-bottom:1px solid black;
+.category-list>li{
+    border-bottom: 1.5px solid black;
     color: white;
+    list-style-type: none;
+    margin: 0.5rem;
 }
 
-td:hover{
+.category-list>li:hover{
     background-color: blanchedalmond; 
-    height: 1.5rem;
     color: black;
     border-radius: 0.2rem;
 }
 
-td:active{
+.category-list>li:active{
     transform: translateY(2px);
+}
+
+/*Responsive Category*/
+
+@media (max-width: 1364px){
+    .category-container{
+        width: 100%;
+    }
+    
+    .category-list{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        font-size: 0.9rem;
+    }
 }

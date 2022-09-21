@@ -1,5 +1,5 @@
 .register-section{
-  height: 83vh;
+  height: 90vh;
   overflow: auto; 
   display: flex;
   justify-content: center;
@@ -11,8 +11,8 @@
   border: 0.05rem solid black;
   margin: auto;
   padding: auto;
-  height: 80vh;
-  width: 90vw;
+  height: 85vh;
+  width: 91vw;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
@@ -27,18 +27,20 @@
   height: 70vh;
   width: 90vw;
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
 
 .register-form{
   background-color: rgba(147,147,147, 0.7);
-  height: 60vh;
+  height: 65vh;
   width: 50vw;
   border-radius: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
 }
 
 .register-form-content{
@@ -50,15 +52,14 @@
 
 .register-form-l-i{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   gap: 0.2rem;
 }
 
 .register-form-l-i>label{
   font-size: large;
-  color: #A02C7D
-  ;
+  color: #A02C7D;
 }
 
 .register-form-l-i>input{
@@ -85,70 +86,60 @@
   border: 0.1rem solid black;
 }
 
-.register-form-b>button:hover{
-  background-color: rgba(160,44,125, 0.9);
+.register-form-b-a:hover{
+  background-color: rgba(255, 210, 31, 0.9);
   transform: translateY(-3px);
-  color: #e8e8e8;
+  box-shadow: 0.5rem 0.5rem rgba(112,31,88, 0.5);
+}
+
+.register-form-b-r:hover{
+  background-color: rgba(50, 185, 50, 0.9);
+  transform: translateY(-3px);
+  box-shadow: 0.5rem 0.5rem rgba(112,31,88, 0.5);
+}
+
+.register-form-b-c:hover{
+  background-color: rgba(229, 50, 65, 0.9);
+  transform: translateY(-3px);
   box-shadow: 0.5rem 0.5rem rgba(112,31,88, 0.5);
 }
 
 .register-form-b>button:active{
   transform: translateY(-1px);
   box-shadow: none;
-
-  /*Responsive loggin*/
-  @media screen and (max-width: 844px){
-.register-section{
-  height: 90vh;
-  width: 100%;
 }
 
+/*Responsive Register*/
+
+@media (max-width: 844px){ 
+  .register-section{
+    display: flex;
+    justify-content:center;
+  }
+
+  .register-form-all{
+    width: 94vw;
+    height: 88vh;
+  }
 
   .register-form-container{  
-  height: 70vh;
-  width: 90vw;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center; 
+  }
 
+  .register-form{
+    width: 80vw;
+    margin-top: 1rem;
+  }
 
+  .register-form-l-i>input{
+    width: 75vw;
+    height: 2rem;
+  }
 
- 
-.register-form{
-  background-color: rgba(147,147,147, 0.7);
-  height: 60vh;
-  width: 50vw;
-  border-radius: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-
-.register-form-content{
-  display: flex;
-  flex-direction:row;  
-  gap: 2rem;
-  font-weight: bold;
-}
-
-
-
-.register-form-l-i>input{
-  width: 40vw;
-  height: 2rem;
- 
-}
-
-
-.register-form-b>button{
-  margin-left: 2rem;
-  height: 2.5rem;
-  width: 5rem;
-}
-
-
-}
+  .register-form-b>button{
+    margin-left: 0.5rem;
+  } 
 }
