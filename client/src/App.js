@@ -7,12 +7,14 @@ import Login from './page/Login/Login';
 import Register from './page/Register/Register';
 import Profile from './page/Profile/Profile';
 import Comment from './page/Comments/Comment';
+import Home from './page/Home/Home';
 
 
 export default function App() {
   return (
     <>
       <Navbar/>
+        <Home/>
         <Login/>
         <Register/>
         <Comment/>
