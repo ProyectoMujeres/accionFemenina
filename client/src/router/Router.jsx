@@ -4,16 +4,19 @@ import Home from "../page/Home/Home";
 import Login from "../page/Login/Login";
 import Profile from "../page/Profile/Profile";
 import Register from "../page/Register/Register";
+import { ProtectedRoute } from "../utils/ProtectedRoutes";
 
-export default function Router({ modalOpen, setModalOpen }) {
+export default function Router() {
     return(
         <>
             <Routes>
-                <Route exact path='/' element={<Home modalOpen={modalOpen} setModalOpen={setModalOpen}/>}/>
+                <Route exact path='/' element={<Home/>}/>
                 <Route exact path='/iniciar-sesion' element={<Login />}/>
                 <Route exact path='/registro' element={<Register />}/>
-                <Route exact path='/mi-perfil' element={<Profile />}/>
-                <Route exact path='/mi-perfil' element={<Comment />}/>
+                <Route element={<ProtectedRoute />}>
+                    <Route exact path='/mi-perfil' element={<Profile />}/>
+                    <Route exact path='/mi-perfil' element={<Comment />}/>
+                </Route>
             </Routes>
         </>
   )
