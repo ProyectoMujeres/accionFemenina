@@ -1,31 +1,13 @@
-@media screen and (max-width: 844px) {
-  .navigation {
-  transition: 0.8s all ease;
-  width: 100%;
-  height: auto;
-  padding: 0.5rem 0rem;
+.navigation{
+  display:flex;
   background-color:#581845;
-  display:inline-flex;
-  justify-content:space-between; 
+  justify-content: space-around; 
   align-items: center; 
-  position: sticky;
-}
 }
  
 .logo{
   height:10rem;
   width: 10rem;
-  margin-left: 0.5rem;
-  padding: auto;
-
-}
- 
-.h1{justify-content: center;
-   align-items: center;
-   margin-left: 15rem;
-   font-size: 3rem;
- 
- 
 }
 
 .menu-profile{
@@ -75,8 +57,17 @@
   color: black;
 }
 
+/*Responsive NavBar*/
 
+@media (max-width: 844px){
+  .navigation {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+    padding: 0.7rem;
+  }
 
-
-
-
+  .navigation>h1{
+    text-align: center;
+  }
+}

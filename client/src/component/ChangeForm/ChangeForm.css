@@ -6,24 +6,18 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    gap: 1.7rem;
+    gap: 2rem;
     border-radius: 1rem;
-    padding: 0.5rem 0rem; 
+    padding: 2rem 2rem; 
 }
 
 .btn-switch-form>button{
-    @media screen and (max-width: 844px) {
-    display:row;
-    height: 8vh;
-    width: 25vw;
+    height: 15vh;
+    width: 8vw;
     border: 0.2em solid black;
     border-radius: 1rem;
     background-color: #fefefe;
     font-weight: bold;
-    
-        
-    }
-
 }
 
 .btn-switch-form>button:hover{
@@ -38,3 +32,30 @@
     box-shadow: none;
 }
 
+/*Responsive ChangeForm */
+
+@media (max-width:844px){
+    .btn-switch-form{
+    height: 30vh;
+    width:100%;
+    display: -ms-inline-flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    align-items: center;
+ 
+    
+    
+    }
+
+}
+
+@media (max-width: 320px){
+    .btn-switch-form>button{
+        height: 5px;
+        width: 8vw;
+        border: 0.2em solid black;
+        border-radius: 1rem;
+        background-color: #fefefe;
+        font-weight: bold;
+    }
+}

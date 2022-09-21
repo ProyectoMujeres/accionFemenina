@@ -13,9 +13,6 @@ export default function App() {
     <BrowserRouter>
       <Navbar/>    
         <Login/>
-        <Register/>
-        <Profile/>
-        <Comment/>
       <Footer/>
     </BrowserRouter>
   );

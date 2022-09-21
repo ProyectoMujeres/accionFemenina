@@ -1,7 +1,4 @@
-@media screen and (max-width: 844px) {
-  
-}
-  body{
+body{
     margin: 0;
     padding: 0;
     background-image: url("./assets/fondodepantalla(1).jpg");
@@ -12,9 +9,5 @@
     min-height: 500px;
     /*scroll-behavior: smooth;*/
     width: 100%;
-    /*padding-top: 100%;*/
-    position: relative;
-
-
-
+    /*padding-top: 100%;*/    
 }

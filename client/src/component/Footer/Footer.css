@@ -1,8 +1,7 @@
 .footer-container{
-    display:row;
+    display:flex;
     justify-content: space-between;
-    padding: 3.5rem;
-    gap:2rem;
+    padding: 0 5rem;
     align-items: center;
     background-color: #581845;
 }
@@ -14,4 +13,15 @@
 }
 .footer-info >p { 
     color: #e8e8e8;
+}
+
+
+/*Responsive Footer */
+
+@media (max-width: 844px){
+    .footer-container{
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+    }
 }
