@@ -1,0 +1,22 @@
+@media screen and (max-width: 844px) {.category-container{
+background-color:rgba(147,147,147, 0.7);
+width: 100%;
+height: auto;
+margin-left:2rem;
+margin-bottom: 15rem;
+padding:0.5 0rem;
+
+}
+
+}
+
+.category-list>li{
+    list-style: none;
+    text-align: center;
+    margin-right: 2rem;
+}
+
+   
+  
+  
+  

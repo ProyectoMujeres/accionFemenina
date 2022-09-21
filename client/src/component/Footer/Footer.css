@@ -14,3 +14,14 @@
 .footer-info >p { 
     color: #e8e8e8;
 }
+
+
+/*Responsive Footer */
+
+@media (max-width: 844px){
+    .footer-container{
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+    }
+}

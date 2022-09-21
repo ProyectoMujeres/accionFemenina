@@ -50,7 +50,7 @@
 
 .register-form-l-i{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   gap: 0.2rem;
 }
@@ -95,4 +95,60 @@
 .register-form-b>button:active{
   transform: translateY(-1px);
   box-shadow: none;
+
+  /*Responsive loggin*/
+
+  @media screen and (max-width: 844px) 
+.register-section{
+  height: 90vh;
+  width: 100%;
+}
+
+@media screen and (max-width: 844px) 
+.register-form-container{  
+  height: 70vh;
+  width: 90vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+
+@media screen and (max-width: 844px) 
+.register-form{
+  background-color: rgba(147,147,147, 0.7);
+  height: 60vh;
+  width: 50vw;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media screen and (max-width: 844px) 
+.register-form-content{
+  display: flex;
+  flex-direction:row;  
+  gap: 2rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 844px) 
+
+.register-form-l-i>input{
+  width: 40vw;
+  height: 2rem;
+ 
+}
+
+@media screen and (max-width: 844px) 
+.register-form-b>button{
+  margin-left: 2rem;
+  height: 2.5rem;
+  width: 5rem;
+}
+
+
 }
