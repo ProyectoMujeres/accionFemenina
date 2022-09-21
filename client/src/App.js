@@ -7,11 +7,13 @@ import Router from './router/Router';
 
 export default function App() {
   return (
+    <>
     <BrowserRouter>
       <Navbar/>    
         <Router/>
       <Footer/>
     </BrowserRouter>
+    </>
   );
 }
 
