@@ -5,12 +5,12 @@ import Login from "../page/Login/Login";
 import Profile from "../page/Profile/Profile";
 import Register from "../page/Register/Register";
 
-export default function Router() {
+export default function Router({ modalOpen, setModalOpen }) {
     return(
         <>
             <Routes>
-                <Route exact path='/' element={<Home />}/>
-                <Route exact path='/iniciar-sesión' element={<Login />}/>
+                <Route exact path='/' element={<Home modalOpen={modalOpen} setModalOpen={setModalOpen}/>}/>
+                <Route exact path='/iniciar-sesion' element={<Login />}/>
                 <Route exact path='/registro' element={<Register />}/>
                 <Route exact path='/mi-perfil' element={<Profile />}/>
                 <Route exact path='/mi-perfil' element={<Comment />}/>

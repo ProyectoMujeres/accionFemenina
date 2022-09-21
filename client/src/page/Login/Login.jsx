@@ -2,17 +2,36 @@ import React, { useState } from 'react'
 import ChangeForm from '../../component/ChangeForm/ChangeForm'
 import './Login.css'
 import { IoClose } from 'react-icons/io5';
-import { IconContext } from "react-icons";
+import { IconContext } from 'react-icons';
+import { useNavigate } from 'react-router-dom';
+import { authService } from '../../utils/auth.service';
 
 export default function Login() {
-  const [user, setUser] = useState([]);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [user, setUser] = useState({ email, password });
+  const navigation = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const user = { email: email, password: password };
+    authService
+      .login(user)
+      .then((res) => {
+        setUser(res.data.token);
+        localStorage.setItem('user', res.data.token);
+        if (res.data.token) {
+          navigation('/mi-perfil', { replace: true })
+        }
+      })
+      .catch(() => setError('Hubo un error'));
+  }
 
   return (
-    <section className="login-section">
+    <section className='login-section'>
       <section className='login-form-all'>
-        <IconContext.Provider value={{size: "2.5em", style:{float: "right", margin: "0 0.5em"}}}>
+        <IconContext.Provider value={{size: '2.5em', style:{float: 'right', margin: '0 0.5em'}}}>
           <IoClose/>
         </IconContext.Provider>
       
@@ -24,11 +43,6 @@ export default function Login() {
           <section className='login-form'>
             <form className='login-form-content'>
               <section className='login-form-l-i'>
-                <label htmlFor='name'>Nombre:</label>
-                <input type='text' placeholder='Maria Contee' name='name' id='name' value={user} onChange={(e)=> setUser(e.target.value)}/>
-              </section>
-
-              <section className='login-form-l-i'>
                 <label htmlFor='email'>Correo electrónico:</label>
                 <input type='email' placeholder='ejemplo@email.com' name='email' id='email' value={email} onChange={(e)=> setEmail(e.target.value)}/>
               </section>
@@ -39,13 +53,14 @@ export default function Login() {
               </section>
 
               <section className='login-form-b'>
-                <button type='submit' className='login-form-b-a'>Aceptar</button>
+                <button onClick={handleSubmit} className='login-form-b-a'>Aceptar</button>
                 <button type='cancel' className='login-form-b-c'>Cancelar</button>
               </section> 
             </form>
           </section>
         </section>
       </section>
+      {error}
     </section>
   )
 }

@@ -11,26 +11,27 @@
     padding: 2rem 2rem; 
 }
 
-.btn-switch-form>button{
+.btn-switch-form-b{
     height: 15vh;
-    width: 8vw;
+    width: 10vw;
     border: 0.2em solid black;
     border-radius: 1rem;
     background-color: #fefefe;
     font-weight: bold;
 }
 
-.btn-switch-form>button:hover{
+.btn-switch-form-b:hover{
     background-color: rgba(160,44,125, 0.9);
     transform: translateY(-3px);
     color: #e8e8e8;
     box-shadow: 0.5rem 0.5rem rgba(112,31,88, 0.5);
 }
 
-.btn-switch-form>button:active{
+.btn-switch-form-b:active{
     transform: translateY(-1px);
     box-shadow: none;
 }
+
 /*Responsive ChangeForm */
 
 @media (max-width: 844px){
@@ -41,8 +42,8 @@
         flex-direction: row;
     }  
 
-    #btn-switch-form>button{
+    #btn-switch-form-b{
         height: 6vh;
-        width: 50vw;
+        width: 30vw;
     }
 }

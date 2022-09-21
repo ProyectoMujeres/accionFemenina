@@ -2,18 +2,41 @@ import React, { useState } from 'react'
 import ChangeForm from '../../component/ChangeForm/ChangeForm'
 import './Register.css'
 import { IoClose } from 'react-icons/io5';
-import { IconContext } from "react-icons";
+import { IconContext } from 'react-icons';
+import { useNavigate } from 'react-router-dom';
+import { authService } from '../../utils/auth.service';
 
 export default function Register() {
   const [name, setName] = useState([]);
   const [date, setDate] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const navigation = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const user = { 
+      name: name, 
+      email: email, 
+      password: password, 
+      birthday: date,
+      rol:' ', 
+      avatar:' '
+    };
+    authService
+      .register(user)
+      .then(() => {
+        navigation('/iniciar-sesion', { replace: true });
+      })
+      .catch(() => setError('Hubo un error'));
+  }
 
   return (
-    <section className="register-section">
+    <section className='register-section'>
+      {error}
       <section className='register-form-all'>
-        <IconContext.Provider value={{size: "2.5em", style:{float: "right", margin: "0 0.5em"}}}>
+        <IconContext.Provider value={{size: '2.5em', style:{float: 'right', margin: '0 0.5em'}}}>
           <IoClose/>
         </IconContext.Provider>
       
@@ -45,7 +68,7 @@ export default function Register() {
               </section>
 
               <section className='register-form-b'>
-                <button type='submit' className='register-form-b-a'>Aceptar</button>
+                <button onClick={handleSubmit} className='register-form-b-a'>Aceptar</button>
                 <button type='reset' className='register-form-b-r'>Refrescar</button>
                 <button type='cancel' className='register-form-b-c'>Cancelar</button>
               </section> 
