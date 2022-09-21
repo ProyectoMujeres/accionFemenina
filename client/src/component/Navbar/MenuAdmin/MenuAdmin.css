@@ -1,0 +1,46 @@
+.menu-admin-container{
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0;
+}
+
+.menu-admin-profile{
+  background-color:#581845;
+  height:4rem;
+}
+
+.menu-admin-li{
+  float: right; 
+}
+  
+#menu-admin-li{
+  display: inline-block; 
+  text-align: center;
+}
+  
+.menu-admin-links{
+  display: none; 
+  position: absolute; 
+  background-color: rgb(160, 44, 125); 
+  z-index: 3; 
+}
+
+.menu-admin-links>p>a{
+  padding: 0.5em 1em; 
+  text-decoration: none;
+  color:white;
+  font-weight: bold;
+}
+  
+#menu-admin-li:hover>.menu-admin-links{
+  display: block; 
+}
+  
+.menu-admin-links>p:hover { 
+  background-color: blanchedalmond; 
+  height: 1.5rem;
+}  
+  
+.menu-admin-links>p>a:hover{
+  color: black;
+}  
