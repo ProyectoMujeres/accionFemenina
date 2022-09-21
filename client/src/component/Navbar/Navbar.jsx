@@ -2,6 +2,8 @@ import React from "react";
 import "./Navbar.css";
 import logowomen from "../../assets/logowomen.png";
 import iconNavbar from"../../assets/iconNavbar.png";
+import MenuAdmin from "./MenuAdmin";
+
 
 export default function Navbar() {
   return (
@@ -9,7 +11,7 @@ export default function Navbar() {
       <a href = "/"> <img src={logowomen} alt="logowomen" className="logo"/></a>
 
       <h1>Acción Femenina</h1>
-      
+   <MenuAdmin/> 
       <div className="navigation-menu">
         <ul className="menu-container ">
           {" "}

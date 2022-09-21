@@ -1,0 +1,37 @@
+.search-container{
+    box-shadow: 0 0.4em 0.4em -0.5em var(--color-boxShadow);
+    border: 0.1rem solid black;
+    border-radius: 0.5rem;
+    cursor:pointer;
+}
+
+.search-container>input{
+    border-radius: 0.5rem;
+    border: none;
+    width: 72vmax;
+    height: 3.5rem;
+    text-indent: 1rem; 
+    font-weight: bold;
+}
+
+.search-container>input:hover{
+    border: 1px solid rgba(112,31,88, 0.9);
+}
+
+.search-container>button{
+    width: 3.5rem;
+    height: 3.6rem;
+    border: none;
+    background-color: transparent;
+    border-radius: 0.5rem;
+}
+
+.search-container>button:hover{
+    background-color: rgba(242, 202, 39, 0.7);
+    transform: translateY(-1px);
+    box-shadow: 0.1rem 0.1rem rgba(112,31,88, 0.5);
+}
+
+.search-container>button:active{
+    box-shadow: none;
+}

@@ -2,8 +2,8 @@ import React, { useCallback, useRef, useState } from 'react';
 import "./Comment.css" ;
 import Search from '../../component/Search/Search';
 import Category from '../../component/Category/Category';
-
-
+import { IoCreate } from 'react-icons/io5'
+import { IconContext } from 'react-icons';
 
 export default function Comment() {
   const [search, setSearch] = useState(""); 
@@ -12,17 +12,24 @@ export default function Comment() {
   
   return (
     <section className="comment-container">
-    <section>
-    <button>Crear publicación</button>
-    <Search search={search} searchInput={searchInput} handleSearch={handleSearch}/> 
-    </section>
-    <section>
- <Category/><section>
-  <img src ="" alt= ""/>
-  <p></p>
+      <section className='comment-search-create-section'>
+        <button className='comment-create'> 
+        <IconContext.Provider value={{size: "2.5em"}}>
+          <IoCreate/>
+        </IconContext.Provider>
+        Crear publicación
+        </button>
+        <Search search={search} searchInput={searchInput} handleSearch={handleSearch}/> 
+      </section>
 
- </section>
-</section>
+      <section className='comment-filter-post-section'>
+        <Category/>
+
+        <section className='comment-post'>
+          <img src ="" alt= ""/>
+          <p></p>
+        </section>
+      </section>
 
     </section>
   )

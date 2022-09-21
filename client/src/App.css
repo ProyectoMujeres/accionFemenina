@@ -1,5 +1,13 @@
 body{
     margin: 0;
     padding: 0;
- /*   background-image: url("./assets/fondodepantalla.png");*/
+    background-image: url("./assets/fondodepantalla(1).jpg");
+    background-repeat: no-repeat;
+    /*background-attachment: fixed;*/
+    background-position: center;
+    background-size: cover;
+    min-height: 500px;
+    /*scroll-behavior: smooth;*/
+    width: 100%;
+    /*padding-top: 100%;*/    
 }
