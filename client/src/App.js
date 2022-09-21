@@ -5,7 +5,6 @@ import './App.css';
 import Home from './page/Home/Home';
 import { BrowserRouter } from 'react-router-dom';
 
-
 export default function App() {
   return (
     <>
