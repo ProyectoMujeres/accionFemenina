@@ -39,8 +39,8 @@ export default function Login() {
               </section>
 
               <section className='login-form-b'>
-                <button type='submit'>Aceptar</button>
-                <button type='cancel'>Cancelar</button>
+                <button type='submit' className='login-form-b-a'>Aceptar</button>
+                <button type='cancel' className='login-form-b-c'>Cancelar</button>
               </section> 
             </form>
           </section>

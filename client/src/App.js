@@ -7,12 +7,14 @@ import Register from './page/Register/Register';
 import Profile from './page/Profile/Profile';
 import Comment from './page/Comments/Comment';
 import {BrowserRouter} from 'react-router-dom';
+import ChangeForm from './component/ChangeForm/ChangeForm';
 
 export default function App() {
   return (
     <BrowserRouter>
       <Navbar/>    
         <Login/>
+        <Register/>
       <Footer/>
     </BrowserRouter>
   );

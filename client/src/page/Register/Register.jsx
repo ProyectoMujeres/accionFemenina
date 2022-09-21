@@ -45,9 +45,9 @@ export default function Register() {
               </section>
 
               <section className='register-form-b'>
-                <button type='submit'>Aceptar</button>
-                <button type='reset'>Refrescar</button>
-                <button type='cancel'>Cancelar</button>
+                <button type='submit' className='register-form-b-a'>Aceptar</button>
+                <button type='reset' className='register-form-b-r'>Refrescar</button>
+                <button type='cancel' className='register-form-b-c'>Cancelar</button>
               </section> 
             </form>
           </section>
