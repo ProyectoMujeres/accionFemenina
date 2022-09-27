@@ -15,8 +15,8 @@ export default function Router() {
                 <Route exact path='/registro' element={<Register />}/>
                 <Route element={<ProtectedRoute />}>
                     <Route exact path='/mi-perfil' element={<Profile />}/>
-                    <Route exact path='/mi-perfil' element={<Comment />}/>
-                </Route>
+                </Route> 
+                <Route exact path='/publicaciones' element={<Comment />}/>
             </Routes>
         </>
   )
