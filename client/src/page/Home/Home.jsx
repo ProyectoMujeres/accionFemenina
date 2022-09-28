@@ -1,44 +1,43 @@
 import React from 'react';
 import './Home.css';
-import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import collage1 from "../../assets/Collage1.jpg"
-import collage2 from "../../assets/Collage2.jpg"
 import fotomision from "../../assets/fotomision.jpg";
+import fotopost from "../../assets/AccionFemenina.png";
+import CarouselImg from '../../component/Carousel/CarouselImg';
+import { Link } from 'react-router-dom';
 
 export default function Home(){
     return (
-        <>
-            <Carousel className='main-slide'>
-                <section>
-                    <img src={collage1} alt=''/>
+        <section className='home-container'>
+            <CarouselImg/>
+
+            <section className='home-mision-section'>
+                <section className='home-mision-paragraph'>
+                    <h1>MISIÓN</h1>
+
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                 </section>
-
-                <section>
-                    <img src={collage2} alt=''/>
-                </section>
-            </Carousel>
-
-
-            <section className='section-mision'>
-                <h1 className='parrafo-mision'>
-                    MISIÓN:
-                   <p>"Nuestra misión es ayudar a empoderar mujeres extranjeras, con el objetivo de facilitar su acceso a la información de entidades, que cuentan con los recursos necesarios para su desarrollo personal / profesional en Barcelona".
-                    <p></p>
-                   </p>
-                </h1>
-                <img src ={fotomision} className="foto-mision" alt= ""/>
+                
+                <img src ={fotomision} className="home-mision-img" alt= "misionImg"/>
             </section>
             
 
-            <section className="post-home">
-                <section className="post-circle">
-                </section>
+            <section className="home-post-section">
+                <img src ={fotopost} className="home-post-img" alt= "misionImg"/>
 
-                <section className="post-text">
-                    <p>El texto irá aquí</p>
-                </section>
+                <section className='home-post-text'>
+                        <h1>PUBLICACIONES</h1>
+
+                        <section className='home-post-text-intro'>
+                            <ul>
+                                <li>Para <b>encontrar información</b> que necesites acerca de servicios, ayudas, salud, educación, homologación, entretenimiento, entre otros.</li>
+                                <li>Para <b>aportar algún contenido relacionado</b> que pueda ayudar a crecer la comunidad</li>
+                            </ul>
+                            
+                            <p>Clica <Link to='/publicaciones'  className='home-links'>Aquí</Link>.</p>
+                        </section>
+                </section>              
             </section>
-        </>
+        </section>
     )
 }
