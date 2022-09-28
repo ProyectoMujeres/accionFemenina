@@ -11,8 +11,21 @@
 }
 
 .menu-profile{
-  background-color:#581845;
-  height:4rem;
+  background-color: rgba(254, 254, 254, 0.5);
+  border: 0.1rem solid #fefefe;
+  height:4rem; 
+  border-radius: 2rem;
+}
+
+.navigation>h1{
+  color: #f2ca27;
+}
+
+.navigation-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 /*Responsive NavBar*/

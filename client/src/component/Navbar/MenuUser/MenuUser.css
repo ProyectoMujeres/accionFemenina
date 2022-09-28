@@ -1,6 +1,8 @@
 .menu-user-profile{
-  background-color:#581845;
-  height:4rem;
+  background-color: rgba(254, 254, 254, 0.5);
+  border: 0.1rem solid #fefefe;
+  height:4rem; 
+  border-radius: 2rem;
 }
  
 .menu-user-container{
@@ -8,7 +10,7 @@
   margin: 0; 
   padding: 0;
 } 
- 
+
 .menu-user{
   float: right; 
 }

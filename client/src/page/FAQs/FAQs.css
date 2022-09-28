@@ -1,0 +1,32 @@
+.faqs-container{
+    padding: 1rem;
+}
+
+.faqs-list>li>h3{
+    background-color: rgba(255, 210, 31, 0.9);
+}
+
+.faqs-list>li>p{
+    text-indent: 1rem;
+}
+
+.faqs-list>li>h3>span{
+    color: #A02C7D;
+}
+
+.faqs-list>li>p>i{
+    color: #A02C7D;
+    font-weight: 600;
+}
+
+.iconW{
+    height: 1.5rem;
+    background-color: rgba(112,31,88, 0.5);
+    border-radius: 100%;
+    padding: 0.3rem;
+}
+
+.faqs-links{
+    font-weight: 600;
+    color: rgba(22, 32, 180, 0.9);
+}
