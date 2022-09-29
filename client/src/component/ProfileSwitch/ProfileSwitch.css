@@ -31,3 +31,21 @@
     box-shadow: none;
 }
   
+/*Responsive ProfileSwitch*/
+
+@media (max-width: 844px){
+    .btn-switch{
+        height: auto;
+        width: 72vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;   
+        gap: 0.5rem;
+        padding: 1rem 2rem; 
+    }  
+
+    .btn-switch-b{
+        height: 8vh;
+        width: 34vw; 
+    }
+}

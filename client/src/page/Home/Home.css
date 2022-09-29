@@ -5,6 +5,7 @@
   align-items: center;
   gap: 2rem;
   margin: 2rem 0;
+  width: 100%;
 }
 
 .home-mision-section{
@@ -31,7 +32,7 @@
 
 .home-mision-img{
   border-radius: 3rem;
-  width: 18rem; 
+  width: 13rem; 
   height: 20rem;  
 }
 
@@ -69,4 +70,25 @@
 
 .home-post-text-intro>ul>li>b{
   color: #871665;
+}
+
+/*Responsive Home*/
+
+@media (max-width: 844px){
+  .home-mision-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+  }
+
+  .home-post-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+    width: 90%;
+  }
 }

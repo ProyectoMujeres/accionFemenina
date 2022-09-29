@@ -31,7 +31,7 @@ export default function Home(){
                         <section className='home-post-text-intro'>
                             <ul>
                                 <li>Para <b>encontrar información</b> que necesites acerca de servicios, ayudas, salud, educación, homologación, entretenimiento, entre otros.</li>
-                                <li>Para <b>aportar algún contenido relacionado</b> que pueda ayudar a crecer la comunidad</li>
+                                <li>Para <b>aportar algún contenido relacionado</b> que pueda ayudar a crecer la comunidad.</li>
                             </ul>
                             
                             <p>Clica <Link to='/publicaciones'  className='home-links'>Aquí</Link>.</p>

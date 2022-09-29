@@ -39,6 +39,6 @@
   }
 
   .navigation>h1{
-    text-align: center;
+    display: none;
   }
 }
