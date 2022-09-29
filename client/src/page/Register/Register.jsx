@@ -20,7 +20,7 @@ export default function Register() {
       name: name, 
       email: email, 
       password: password, 
-      birthday: date,
+      birthdate: date,
       rol:' ', 
       avatar:' '
     };

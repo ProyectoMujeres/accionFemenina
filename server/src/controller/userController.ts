@@ -5,13 +5,13 @@ import userModel from '../model/userModel';
 const userController = {
     saveUser: async (req: Request, res: Response) => {
         try{
-            const {name, email, password, birthday, rol, avatar, ...users}: iUser = req.body;
+            const {name, email, password, birthdate, rol, avatar, ...users}: iUser = req.body;
 
             if(!email  || !password){
                 res.status(404).send('Email or password missing');
             }
             
-            const result = await userModel.saveUser({ name, email, password, birthday, rol, avatar });
+            const result = await userModel.saveUser({ name, email, password, birthdate, rol, avatar });
 
             result
                 ? res.status(200).json({ result: `A new user has been successfully created` + result }) 
