@@ -1,13 +1,50 @@
-.mision-section {
+.main-slide{
+  padding-top: 30px;
+  }
+  
+  .carousel .slider-wrapper{
+  width: 50%;
+  } 
+  
+  .carousel .thumb{
+  width: 5%;
+  height:50px;
+  } 
+  
+  .carousel{
+  text-align: center;
+  }
+  
+  /* dentro de (home.js) tiene las images con height: 300px y width: 200px !!!!!!!!!!!!!!!!!!!*/
+  
+  /* .fotocollage{
+  background-size: cover;
+  max-width: 100%;
+  height: auto;
+  } */
+  
+  /* .collage .slider-wrapper{
+  height: 200rem;
+  padding-left: 25vh;
+  background-size: contain;
+  object-fit: cover;
+  background-size: cover;
+  background-size: 100%;
+  background-size: 100vw 100vh;
+  max-width: 95%;
+  height: auto;
+  width: 50%;
+  } */
+
+.section-mision {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 0 4rem;
   gap: 2rem;
-
 }
 
-.mision-parrafo{
+.parrafo-mision{
   /* color: #401232; */
   color: #50163F;
 }
@@ -36,8 +73,4 @@
   background-color: rgba(147,147,147, 0.7);
   height: 10rem;
   width: 60rem;
-}
-
-.carousel{
-  text-align: center;
 }
