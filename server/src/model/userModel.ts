@@ -3,8 +3,8 @@ import { iUser, iUserLogin } from "./interface/iUser";
 
 class User {
     async saveUser(users: iUser){
-        const queryStr='INSERT INTO users (name, email, password, birthday, rol, avatar) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *'
-        const values = [users.name, users.email, users.password, users.birthday, users.rol, users.avatar] as string[]
+        const queryStr='INSERT INTO users (name, email, password, birthdate, rol, avatar) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *'
+        const values = [users.name, users.email, users.password, users.birthdate, users.rol, users.avatar] as string[]
         const result:any = await connection.query(queryStr, values)
         return result.rows[0];
     }

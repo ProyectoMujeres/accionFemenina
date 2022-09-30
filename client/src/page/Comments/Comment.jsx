@@ -4,6 +4,7 @@ import Search from '../../component/Search/Search';
 import Category from '../../component/Category/Category';
 import { IoCreate } from 'react-icons/io5'
 import { IconContext } from 'react-icons';
+import { Link } from 'react-router-dom';
 
 export default function Comment() {
   const [search, setSearch] = useState(""); 
@@ -13,12 +14,14 @@ export default function Comment() {
   return (
     <section className="comment-container">
       <section className='comment-search-create-section'>
-        <button className='comment-create'> 
-          <IconContext.Provider value={{size: "2.5em"}}>
-            <IoCreate/>
-          </IconContext.Provider>
-          Crear publicación
-        </button>
+        <Link to='/crear-publicacion' className='comment-link'> 
+          <button className='comment-create'> 
+            <IconContext.Provider value={{size: "2.5em"}}>
+              <IoCreate/>
+            </IconContext.Provider>
+            Crear publicación
+          </button>
+        </Link>
 
         <Search search={search} searchInput={searchInput} handleSearch={handleSearch}/> 
       </section>
