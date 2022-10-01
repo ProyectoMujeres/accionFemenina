@@ -1,4 +1,4 @@
-## 💻 La Casa de la Mujer
+## 💻 Acción Femenina
 
 ## 🛠️ Mock up
 
@@ -8,13 +8,12 @@
 
 <ul>
     <li>React</li>
-    <li>Expressjs</li>
-    <li>Nodejs</li>
-    <li>Tailwindcss</li>
+    <li>Express js</li>
+    <li>Node js</li>
+    <li>CSS</li>
     <li>Jest</li>
     <li>TypeScript</li>
-    <li>NPM</li>
-    
+    <li>NPM</li> 
 </ul>
 
 ## 🔍 Instalación
@@ -25,10 +24,12 @@
             <p>git clone <i>https://github.com/ProyectoMujeres/casadelamujer.git </i></p> 
         <li>Instalamos Node Package Manager: </li> 
              <p>npm install / npm i</p>
-        <li>Vizualizamos el proyecto ejecutando en un terminal integrado para client</li> 
+        <li>Visualizamos el proyecto ejecutando en un terminal integrado para:</li> 
             <ul> 
                 <li>📂 El "client" usando el comando:</li> 
                     <p>npm start</p>
+                <li>📂 El "server" usando el comando:</li> 
+                    <p>npm start src/server</p>
             </ul>
     </ul>
 
