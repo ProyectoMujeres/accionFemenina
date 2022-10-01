@@ -6,10 +6,10 @@ import jwt from '../middleware/jwt';
 
 const router = Router();
 
-router.get('/admin/user', jwt.validateToken, admin.checkRol, userController.getAllUsers)
+router.get('/admin/user', jwt.validateToken, admin.checkRol, userController.getUsers);
 router.post('/user', encryptPassword, userController.saveUser);
 router.get('/user/:user_id',  userController.getOneUser);
-router.put('/admin/user/:user_id', jwt.validateToken, admin.checkRol, userController.modifUser)
-router.delete('/admin/user/:user_id', jwt.validateToken, admin.checkRol, userController.deleteUser)
+router.put('/admin/user/:user_id', jwt.validateToken, admin.checkRol, userController.modifUser);
+router.delete('/admin/user/:user_id', jwt.validateToken, admin.checkRol, userController.deleteUser);
 
-export default router
+export default router;

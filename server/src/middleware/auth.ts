@@ -2,30 +2,30 @@ import {Request, Response,  NextFunction} from 'express';
 import bcrypt  from 'bcrypt';
 import userModel from '../model/userModel';
 
-export const encryptPassword= async (req: Request,res: Response, next: NextFunction) =>{
+export const encryptPassword = async (req: Request, res: Response, next: NextFunction) => {
     try{
         if(!req.body.password){ 
-            res.send('Password missing')
+            res.send('Password missing');
         } else { 
-            const saltRounds= 10;
+            const saltRounds = 10;
             const passwordHash = await bcrypt.hash(req.body.password, saltRounds);
-            req.body.password= passwordHash;
+            req.body.password = passwordHash;
             next();        
         }
     } catch (error){
-        res.status(500).send('Error auth')
+        res.status(500).send('Error auth');
     }
 }
 
-const validateUser = async (req: Request,res: Response, next: NextFunction)=>{
+const validateUser = async (req: Request, res: Response, next: NextFunction) => {
     try {
-        const {email, password} =req.body;
+        const { email, password } = req.body;
 
         if(!email || !password){
            throw new Error('Email or password does not exist');
         }
 
-        const result = await userModel.getUser({email, password});
+        const result = await userModel.getUser({ email, password });
         const comparePassword = await bcrypt.compare(password, result.password);
 
         if(comparePassword){
@@ -38,4 +38,4 @@ const validateUser = async (req: Request,res: Response, next: NextFunction)=>{
     }
 }
 
-export default {validateUser}
+export default { validateUser };

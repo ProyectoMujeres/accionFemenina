@@ -15,6 +15,6 @@ app.use (express.json())
 app.use(express.urlencoded({extended:false}));
 
 app.use(userRoute);
-app.use(loginRoute)
+app.use(loginRoute);
 
 export default app;

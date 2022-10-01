@@ -4,11 +4,11 @@ import { config } from '../services/config';
 
 const {secret} = config()
 
-const generateToken = async (req: Request, res: Response, next: NextFunction) =>{
+const generateToken = async (req: Request, res: Response, next: NextFunction) => {
     try{
-        const token = await jwt.sign( {email: req.body.email }, secret, { expiresIn: '1h', algorithm: 'HS256' })
+        const token = await jwt.sign({ email: req.body.email }, secret, { expiresIn: '1h', algorithm: 'HS256' });
         console.log(token)
-        req.body.token = token
+        req.body.token = token;
         
         next()
     } catch (error: any){
@@ -28,7 +28,7 @@ const validateToken= (req: any, res: Response, next: NextFunction) => {
             if(err) {
             res.status(403).send("Token unvalid");
             } else {
-                req.body.email= decoded.email;
+                req.body.email = decoded.email;
                 next();
             }
         });
@@ -37,4 +37,4 @@ const validateToken= (req: any, res: Response, next: NextFunction) => {
     }
 }
   
-export default {generateToken, validateToken}
+export default { generateToken, validateToken };
