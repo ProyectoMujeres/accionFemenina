@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors'
 import connection from './services/database.service'
-import { loginRoute, userRoute } from './route';
+import { categoryRoute, loginRoute, userRoute } from './route';
 
 async function conectingDb() {
     await connection.connect()
@@ -16,5 +16,6 @@ app.use(express.urlencoded({extended:false}));
 
 app.use(userRoute);
 app.use(loginRoute);
+app.use(categoryRoute);
 
 export default app;

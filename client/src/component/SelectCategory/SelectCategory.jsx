@@ -11,11 +11,11 @@ export default function SelectCategory(){
   useEffect(()=>{
     GetInfo.getCategories()
       .then((res)=>{ 
-        let tag = res.categories;
+        let tag = res.result;
         setCategories(tag)
       })
   }, [setCategories])
-
+  
     return(
       <section className='select-category-container'>
         <IconContext.Provider value={{ size: '2.5em' }}>

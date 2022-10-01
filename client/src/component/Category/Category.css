@@ -10,20 +10,20 @@
     padding: 0.5rem;
 }
 
-.category-list>li{
+.category-list-items{
     border-bottom: 1.5px solid black;
     color: white;
     list-style-type: none;
     margin: 0.5rem;
 }
 
-.category-list>li:hover{
+.category-list-items:hover{
     background-color: blanchedalmond; 
     color: black;
     border-radius: 0.2rem;
 }
 
-.category-list>li:active{
+.category-list-items:active{
     transform: translateY(2px);
 }
 
@@ -43,7 +43,7 @@
         font-size: 0.9rem;
     }
 
-    .category-list>li{
+    .category-list-items{
         margin: 0.2rem;
     }
 }
