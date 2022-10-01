@@ -25,9 +25,7 @@ export default function Avatar(){
 
   return (
     <section className='avatar-container'>
-      <section className='avatar-img'>
-        <img src={picture.croppedImg} alt='Avatar'/>
-      </section>
+      <img src={picture.croppedImg} alt='Avatar'className='avatar-img'/>
          
       <label htmlFor='search-avatar' className='search-avatar'>
         <IconContext.Provider value={{ size: '1.5rem' }}>

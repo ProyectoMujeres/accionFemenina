@@ -1,0 +1,128 @@
+.MyComments-all{
+  margin: 2rem;
+}
+
+.MyComments-section{
+  margin-bottom: 1rem;
+}
+
+.MyComments-title{
+  text-align: center;
+  background-color: #581845;
+  color: #e8e8e8;
+}
+
+.MyComments-avatar{  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+
+
+
+/* .MyComments-content{
+  display: flex;
+} */
+
+
+
+
+
+
+
+
+
+
+.MyComments-container{
+  margin: 2rem;
+}
+
+.MyComments-create-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.MyComments-create{
+  height: 4rem;
+  width: 15rem;
+  font-weight: bold;
+  border-radius: 1rem;
+  border: 0.1rem solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(210, 205, 205);
+}
+
+.MyComments-create:hover{
+  background-color: rgb(242, 202, 39);
+  transform: translateY(-3px);
+  box-shadow: 0.5rem 0.5rem rgba(112,31,88, 0.5);
+}
+
+.MyComments-create:active{
+  transform: translateY(-1px);
+  box-shadow: none;
+}
+
+
+
+
+
+
+.MyComments-post{
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.MyComments-post>img{
+    width: 5rem;
+    height: 5rem;
+    background-color: rgb(176, 176, 176);
+    border-radius: 100%;
+}
+
+.MyComments-post-content{
+    width: 67vw;
+    height: 10vh;
+    background-color: rgb(176, 176, 176);
+    border-radius: 0.5rem;
+}
+
+.MyComments-post-name-date{
+    width: 40vw;
+    height: 3vh;
+    background-color: rgb(176, 176, 176);
+}
+
+.MyComments-link{
+    text-decoration: none;
+}
+
+
+/*Responsive MyComments*/
+
+@media (max-width: 844px){
+  .MyComments-avatar{ 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    gap: 1rem;   
+  }
+
+@media (max-width: 844px){
+    .MyComments-create-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+}
