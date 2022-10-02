@@ -9,7 +9,7 @@ app.use(userRoute);
 describe('DELETE/user/:id', ()=>{
     test( "Responds a message 'Selected user was not deleted'",async ()=>{
         const response = await request(app)
-            .delete('/admin/user/28')
+            .delete('/admin/users/28')
         expect(response.status).toBe(500);
     });
 });
