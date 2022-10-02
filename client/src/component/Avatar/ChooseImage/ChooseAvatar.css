@@ -1,0 +1,43 @@
+.choose-avatar-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.choose-avatar-slider{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.choose-avatar-slider-b{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6rem;
+}
+
+.choose-avatar-slider-b>button{
+  height: 2.5rem;
+  width: 5rem;
+  font-weight: bold;
+  border-radius: 1rem;
+  background-color: #fefefe;
+  border: 0.1rem solid black;
+}
+
+.choose-avatar-slider-b-s:hover{
+  background-color: rgba(50, 185, 50, 0.9);
+  transform: translateY(-3px);
+  box-shadow: 0.5rem 0.5rem rgba(112,31,88, 0.5);
+}
+
+.choose-avatar-slider-b-c:hover{
+  background-color: rgba(229, 50, 65, 0.9);     
+  transform: translateY(-3px);
+  box-shadow: 0.5rem 0.5rem rgba(112,31,88, 0.5);
+}

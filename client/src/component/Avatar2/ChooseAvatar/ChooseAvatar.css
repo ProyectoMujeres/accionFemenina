@@ -1,0 +1,53 @@
+.choose-avatar-container{
+    border: 0.2rem solid black;
+    padding: 1rem;
+    border-radius: 2rem;
+    background-color: rgba(254,254,254,0.8);
+    margin-bottom: 1rem;
+    width: 30rem;
+}
+
+.choose-avatar-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.7rem;
+}
+
+.choose-avatar-view{
+    width: 19rem;
+}
+
+.preview-img{
+    height: 10rem;
+    width: 10rem;
+    border: 0.1rem solid black;
+    border-radius: 100%;
+}
+
+.preview-img-selected{
+    height: 10rem;
+    width: 10rem;
+}
+
+.choose-avatar-b{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.choose-avatar-b>button{
+    height: 3rem;
+    width: 5rem;
+    font-weight: bold;
+    border-radius: 1rem;
+}
+
+.choose-avatar-b-c{
+    background-color: rgba(229, 50, 65, 0.9);      
+}
+
+.choose-avatar-b-a{
+    background-color: rgba(50, 185, 50, 0.9);
+}

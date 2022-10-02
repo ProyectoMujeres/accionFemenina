@@ -1,0 +1,18 @@
+.avatar-img-bust{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 100%;
+    background-color: brown;
+}
+
+.avatar-img-rounded{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 100%;
+}
+
+.avatar-img-remove{
+    background-color: brown;
+    position: relative;
+    border-radius: 100%;
+}

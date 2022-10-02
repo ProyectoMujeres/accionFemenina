@@ -42,4 +42,8 @@
         flex-wrap: wrap;
         font-size: 0.9rem;
     }
+
+    .category-list>li{
+        margin: 0.2rem;
+    }
 }

@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import iconNavbar from'../../assets/iconNavbar.png';
 import MenuAdmin from './MenuAdmin/MenuAdmin';
 import MenuUser from './MenuUser/MenuUser';
 import { Link } from 'react-router-dom';
 
 export const Menu = ({ user }) => {
+    const [modalOpen, setModalOpen] = useState(false);
+
     if (user && user.roles.includes("admin")){
         return  <MenuAdmin/>
     } else if (localStorage.getItem("user")) {

@@ -1,52 +1,43 @@
 import React from 'react';
 import './Home.css';
-import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import collage2 from "../../assets/Collage2.jpg"
-import collage1 from "../../assets/Collage1.jpg"
 import fotomision from "../../assets/fotomision.jpg";
+import fotopost from "../../assets/AccionFemenina.png";
+import CarouselImg from '../../component/Carousel/CarouselImg';
+import { Link } from 'react-router-dom';
 
 export default function Home(){
     return (
-        <>
-            <Carousel>
-                <section>
-                    <img src={collage2} alt=''/>
+        <section className='home-container'>
+            <CarouselImg/>
+
+            <section className='home-mision-section'>
+                <section className='home-mision-paragraph'>
+                    <h1>MISIÓN</h1>
+
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                 </section>
-
-                <section>
-                    <img src={collage1} alt=''/>
-                </section>
-            </Carousel>
-
-            <section className='mision-section'>
-                <h1 className='mision-parrafo'>
-                    MISIÓN:
-                   <p>Ayudar a las mujeres extranjeras que puedan acceder con mayor facilidad a la información de entidades que cuentan  con los recursos necesarios para su desarrollo en Barcelona.
-                    <br></br>
-
-                    <br></br>
-                    Ayuda y Acción, podemos ser voluntarias en la fundación, Acción Femenina y tener la alegría de colaborar a mujeres inmigrantes a superar el proceso de las barreras y los obstáculos que le impiden en su desarrollo personal.
-
-                   {/*  ayuda y acción            palabras motivadoras
-                   Necesitamos empoderarnos, podemos ser voluntarias en alguna associación y tener la alegria de ayudar a otras mujeres extranjeras. */}
-                   </p>
-                </h1>
-
-                <img src ={fotomision} className="foto-mision" alt= ""/>
+                
+                <img src ={fotomision} className="home-mision-img" alt= "misionImg"/>
             </section>
             
 
+            <section className="home-post-section">
+                <img src ={fotopost} className="home-post-img" alt= "misionImg"/>
 
+                <section className='home-post-text'>
+                        <h1>PUBLICACIONES</h1>
 
-            <section className="post-home">
-                <section className="post-circle">
-                </section>
-
-                <section className="post-text">
-                    <p>El texto irá aquí</p>
-                </section>
+                        <section className='home-post-text-intro'>
+                            <ul>
+                                <li>Para <b>encontrar información</b> que necesites acerca de servicios, ayudas, salud, educación, homologación, entretenimiento, entre otros.</li>
+                                <li>Para <b>aportar algún contenido relacionado</b> que pueda ayudar a crecer la comunidad.</li>
+                            </ul>
+                            
+                            <p>Clica <Link to='/publicaciones'  className='home-links'>Aquí</Link>.</p>
+                        </section>
+                </section>              
             </section>
-        </>
+        </section>
     )
 }

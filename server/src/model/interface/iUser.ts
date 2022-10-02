@@ -8,5 +8,5 @@ export interface  iUser extends  iUserLogin {
     rol?: string;
     avatar?: string;
     user_id?: number;
-    birthday?: string;
+    birthdate?: string;
 }

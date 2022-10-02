@@ -5,13 +5,17 @@
     align-items: center;
     background-color: #581845;
 }
-.footer-container >h3{
+
+.footer-container>.link{
+    color: #f2ca27;
+    text-decoration: none;
+}
+
+.footer-info>h3 { 
     color: #f2ca27;
 }
-.footer-info >h3  { 
-    color: #f2ca27;
-}
-.footer-info >p { 
+
+.footer-info>p { 
     color: #e8e8e8;
 }
 

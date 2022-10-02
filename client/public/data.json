@@ -1,0 +1,30 @@
+{
+  "categories":
+    [
+      {
+        "category_id": 1,
+        "type": "Asesoramiento",
+        "icon": "abc"
+      },
+      {
+        "category_id": 2,
+        "type": "Salud",
+        "icon":"123"
+      },
+      {
+        "category_id": 3,
+        "type": "Educación",
+        "icon":"def"
+      },
+      {
+        "category_id": 4,
+        "type": "Ocio",
+        "icon":"567"
+      },
+      {
+        "category_id": 5,
+        "type": "Emergencia",
+        "icon":"ghi"
+      }
+    ]
+}

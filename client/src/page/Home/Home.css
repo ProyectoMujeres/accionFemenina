@@ -1,43 +1,94 @@
-.mision-section {
+.home-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.home-mision-section{
+  background-color: rgba(244, 164, 96,0.5);
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 0 4rem;
-  gap: 2rem;
-
+  padding: 2rem 1rem;
+  gap: 3rem;
+  border-radius: 1rem;
+  width: 95vw;
 }
 
-.mision-parrafo{
-  /* color: #401232; */
+.home-mision-paragraph>h1{
+  color: #c5038a;
+  text-align: center;
+}
+
+.home-mision-paragraph>p{
+  text-indent: 1rem;
+  text-align: justify;
   color: #50163F;
 }
 
-.foto-mision{
-/*  border-radius: 50% ;  */
- border-radius: 3rem;
- width: 18rem; 
- height: 20rem;  
+.home-mision-img{
+  border-radius: 3rem;
+  width: 13rem; 
+  height: 20rem;  
 }
 
-.post-home{
+.home-post-section{
+  background-color: rgba(244, 164, 96,0.5);
   display: flex;
-  justify-content:space-evenly;
-  padding: 6rem;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem 1rem;
+  gap: 3rem;
+  border-radius: 1rem;
+  width: 95vw;
 }
 
-.post-circle{
-  background-color: rgba(147,147,147, 0.7);
-  height: 10rem;
-  width: 10rem;
-  border-radius: 30rem;
+.home-post-img{
+  border-radius: 3rem;
+  width: 20rem; 
+  height: 20rem; 
 }
 
-.post-text{
-  background-color: rgba(147,147,147, 0.7);
-  height: 10rem;
-  width: 60rem;
-}
-
-.carousel{
+.home-post-text>h1{
+  color: #c5038a;
   text-align: center;
+}
+
+.home-post-text-intro{
+  text-align: justify;
+  color: #50163F;
+}
+
+.home-post-text-intro>p{
+  text-align: center;
+  font-weight: bold;
+}
+
+.home-post-text-intro>ul>li>b{
+  color: #871665;
+}
+
+/*Responsive Home*/
+
+@media (max-width: 844px){
+  .home-mision-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+  }
+
+  .home-post-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+    width: 90%;
+  }
 }

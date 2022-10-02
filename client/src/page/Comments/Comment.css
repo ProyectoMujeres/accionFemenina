@@ -65,6 +65,10 @@
     background-color: rgb(176, 176, 176);
 }
 
+.comment-link{
+    text-decoration: none;
+}
+
 /*Responsive Comment*/
 
 @media (max-width: 1364px){
