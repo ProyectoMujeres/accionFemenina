@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import NewPost from "../component/NewPost";
+import NewComment from "../component/NewComment/NewComment";
 import Comment from "../page/Comments/Comment";
 import FAQs from "../page/FAQs/FAQs";
 import Home from "../page/Home/Home";
@@ -22,7 +22,7 @@ export default function Router() {
                 </Route> 
                 <Route exact path='/publicaciones' element={<Comment />}/>
                 <Route exact path='/preguntas-frecuentes' element={<FAQs />}/>
-                <Route exact path='/crear-publicacion' element={<NewPost/>}/>     
+                <Route exact path='/crear-publicacion' element={<NewComment/>}/>     
             </Routes>
         </>
   )

@@ -18,7 +18,7 @@ export default function Category() {
       <ul  className="category-list">
         {categories.map((op, i) => 
           <section key={i} className='category-list-items'>
-            <li>{op.type} {op.ico}</li>
+            <li>{op.type} <img src={op.icon} alt='icon' className='category-list-items-img'/></li>
           </section>
         )}
       </ul>
