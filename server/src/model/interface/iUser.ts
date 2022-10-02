@@ -4,9 +4,8 @@ export interface iUserLogin{
 }
 
 export interface  iUser extends iUserLogin{
-    name?: string;
+    name: string;
+    birthdate: string;
     role?: string;
     avatar?: string;
-    user_id?: number;
-    birthdate?: string;
 }

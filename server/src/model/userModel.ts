@@ -45,7 +45,7 @@ class User {
         return result.rows[0];
     }
 
-    async deleteUser(user_id:any){
+    async deleteUser(user_id: any){
         const queryStr = 'DELETE FROM users WHERE user_id=$1 RETURNING *';
         const values = [user_id];
         const result: any = await connection.query(queryStr, values);

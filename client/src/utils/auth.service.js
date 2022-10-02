@@ -7,7 +7,7 @@ export const authService = {
    },
 
    register(user){
-      console.log(process.env.REACT_APP_API_URL+"/user")
-      return axios.post(process.env.REACT_APP_API_URL+"/user", user);
+      console.log(process.env.REACT_APP_API_URL+"/users")
+      return axios.post(process.env.REACT_APP_API_URL+"/users", user);
    },
 }

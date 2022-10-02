@@ -7,8 +7,8 @@ const userController = {
         try{
             const {name, email, password, birthdate, role, avatar, ...users}: iUser = req.body;
 
-            if(!email  || !password){
-                res.status(404).send('Email or password missing');
+            if(!name || !email  || !password || !birthdate ){
+                res.status(404).send('Name, email, password or birthdate missing');
             }
             
             const result = await userModel.saveUser({ name, email, password, birthdate, role, avatar });
