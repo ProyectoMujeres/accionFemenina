@@ -1,6 +1,6 @@
 .btn-switch{
     background-color: rgba(147,147,147, 0.7);
-    width: 15vw;
+    width: 20vw;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -9,10 +9,17 @@
     border-radius: 1rem;
     padding: 2rem 2rem; 
 }
-  
+
+.btn-switch-links{
+    text-decoration: none;
+}
+
 .btn-switch-b{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 8vh;
-    width: 15vw;
+    width: 22vw;
     border: 0.2em solid black;
     border-radius: 1rem;
     background-color: #fefefe;
@@ -47,5 +54,9 @@
     .btn-switch-b{
         height: 8vh;
         width: 34vw; 
+    }
+
+    #btn-switch-edit{
+        width: 40vw; 
     }
 }
