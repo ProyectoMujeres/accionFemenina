@@ -1,0 +1,104 @@
+.my-comments-all{
+  margin: 2rem 0;
+}
+
+.my-comments-title{
+  text-align: center;
+  background-color: #581845;
+  color: #e8e8e8;
+}
+
+.my-comments-content{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.my-commets-posts-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.my-comments-posts-create-b{
+  height: 4rem;
+  width: 15rem;
+  font-weight: bold;
+  border-radius: 1rem;
+  border: 0.1rem solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(210, 205, 205);
+}
+
+.my-comments-posts-create-b:hover{
+  background-color: rgb(242, 202, 39);
+  transform: translateY(-3px);
+  box-shadow: 0.5rem 0.5rem rgba(112,31,88, 0.5);
+}
+
+.my-comments-posts-create-b:active{
+  transform: translateY(-1px);
+  box-shadow: none;
+}
+
+.my-comments-post{
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.my-comments-post>img{
+  width: 5rem;
+  height: 5rem;
+  background-color: rgb(176, 176, 176);
+  border-radius: 100%;
+}
+
+.my-comments-post-content{
+  width: 55vw;
+  height: 10vh;
+  background-color: rgb(176, 176, 176);
+  border-radius: 0.5rem;
+}
+
+.my-comments-post-name-date{
+  width: 40vw;
+  height: 3vh;
+  background-color: rgb(176, 176, 176);
+}
+
+.my-comments-link{
+  text-decoration: none;
+}
+
+/*Responsive MyComments*/
+
+@media (max-width: 844px){
+  .my-comments-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .my-comments-avatar{ 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    gap: 1rem;   
+  }
+  
+  .my-comments-posts-create-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+}

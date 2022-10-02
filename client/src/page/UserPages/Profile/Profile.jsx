@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Profile.css'
-import ProfileSwitch from '../../component/ProfileSwitch/ProfileSwitch';
-import Avatar from '../../component/Avatar/Avatar';
+import ProfileSwitch from '../../../component/ProfileSwitch/ProfileSwitch';
+import Avatar from '../../../component/Avatar/Avatar';
 import { VscSaveAs } from 'react-icons/vsc';
 import{ MdOutlineCancel } from 'react-icons/md';
 import { IconContext } from 'react-icons';

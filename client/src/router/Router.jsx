@@ -4,8 +4,8 @@ import Comment from "../page/Comments/Comment";
 import FAQs from "../page/FAQs/FAQs";
 import Home from "../page/Home/Home";
 import Login from "../page/Login/Login";
-import MyComments from "../page/MyComments/MyComments";
-import Profile from "../page/Profile/Profile";
+import MyComments from "../page/UserPages/MyComments/MyComments";
+import Profile from "../page/UserPages/Profile/Profile";
 import Register from "../page/Register/Register";
 import { ProtectedRoute } from "../utils/ProtectedRoutes";
 
