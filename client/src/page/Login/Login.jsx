@@ -57,12 +57,7 @@ export default function Login() {
     }
 
   return (
-    <section className='login-section'>
-      <section className='login-form-all'>
-        <IconContext.Provider value={{  size: '2.5em', style:{ float: 'right', margin: '0 0.5em' } }}>
-          <IoClose/>
-        </IconContext.Provider>
-      
+      <section className='login-form-all'>   
         <h2 className='login-form-title'>Formulario para Iniciar sesión</h2>
         
         <section className='login-form-container'>
@@ -87,7 +82,7 @@ export default function Login() {
               <section className='login-form-b'>
                 <IconContext.Provider value={{ size: '1.5em', style:{ margin: '0 0.1em' } }}>
                   <button type='submit' onClick={handleSubmit} className='login-form-b-a'><MdOutlineCheckCircle/>Aceptar</button>
-                  <button type='cancel' className='login-form-b-c'><MdOutlineCancel/>Cancelar</button>
+                  <button className='login-form-b-c' onClick={()=>{ window.open('/', '_self') }}><MdOutlineCancel/>Cancelar</button>
                 </IconContext.Provider>
               </section> 
 
@@ -104,6 +99,5 @@ export default function Login() {
           </section>
         </section>
       </section>
-    </section>
   )
 }

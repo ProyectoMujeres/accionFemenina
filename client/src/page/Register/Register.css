@@ -1,26 +1,18 @@
-.register-section{
-  height: 95vh;
-  overflow: auto; 
-  display: flex;
-  justify-content: center;
-}
-
 .register-form-all{
-  position: relative;
-  background-color: #fefefe;
-  border: 0.05rem solid black;
-  margin: auto;
-  padding: auto;
-  height: 90vh;
-  width: 91vw;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  height: 100vh;
 }
 
 .register-form-title{
+  width: 100%;
   text-align: center;
   background-color: #581845;
   color: #e8e8e8;
-  margin: 2.3rem 0;
+  margin-bottom: 2.3rem;
 }
 
 .register-form-container{  
@@ -46,6 +38,7 @@
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  margin-top: 2rem;
 }
 
 .register-form-content{
@@ -124,14 +117,7 @@
 /*Responsive Register*/
 
 @media (max-width: 844px){ 
-  .register-section{
-    height: 100vh;
-    display: flex;
-    justify-content:center;
-  }
-
   .register-form-all{
-    width: 94vw;
     height: 97vh;
   }
 

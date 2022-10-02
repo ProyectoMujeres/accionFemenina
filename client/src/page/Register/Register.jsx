@@ -21,7 +21,6 @@ export default function Register() {
     passwordError: '',
     dateError: '',
   });
-  const [ inputValue, setInputValue ] = useState("Value from onchanges");
 
   const validate = () => {
     let isReq = true;
@@ -73,12 +72,7 @@ export default function Register() {
   }
 
   return (
-    <section className='register-section'>
       <section className='register-form-all'>
-        <IconContext.Provider value={{size: '2.5em', style: { float: 'right', margin: '0 0.5em' } }}>
-          <IoClose/>
-        </IconContext.Provider>
-      
         <h2 className='register-form-title'>Formulario para Registrarse</h2>
         
         <section className='register-form-container'>
@@ -116,7 +110,7 @@ export default function Register() {
                 <IconContext.Provider value={{ size: '1.5em', style:{ margin: '0 0.1em' } }}>
                   <button type='submit' onClick={handleSubmit} className='register-form-b-a'> <MdOutlineCheckCircle/>Aceptar</button>
                   <button type='reset' onClick={() => window.location.reload(false)} className='register-form-b-r'> <MdOutlineRefresh/>Refrescar</button>
-                  <button type='cancel' className='register-form-b-c' ><MdOutlineCancel/>Cancelar</button>
+                  <button className='register-form-b-c' onClick={()=>{ window.open('/', '_self') }}><MdOutlineCancel/>Cancelar</button>
                 </IconContext.Provider>
               </section> 
 
@@ -133,6 +127,5 @@ export default function Register() {
           </section>
         </section>
       </section>
-    </section>
   )
 }

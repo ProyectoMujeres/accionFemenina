@@ -1,19 +1,5 @@
-.login-section{
-    height: 90vh;
-    overflow: auto; 
-    display: flex;
-    justify-content: center;
-}
-
 .login-form-all{
-    position: relative;
-    background-color: #fefefe;
-    border: 0.05rem solid black;
-    margin: auto;
-    padding: auto;
-    height: 85vh;
-    width: 91vw;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    height: 80vh;
 }
 
 .login-form-error{
@@ -26,6 +12,7 @@
     background-color: #581845;
     color: #e8e8e8;
     margin-top: 2.3rem;
+    width: 100%;
 }
 
 .login-form-container{  
@@ -125,14 +112,8 @@
 /*Responsive Login*/
 
 @media (max-width: 844px){
-    .login-section{
-        display: flex;
-        justify-content: center;
-    }
-
     .login-form-all{
-        width: 94vw;
-        height: 88vh;
+        height: 80vh;
     }
     
     .login-form-container{ 
