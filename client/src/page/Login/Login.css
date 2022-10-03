@@ -1,19 +1,10 @@
-.login-section{
-    height: 90vh;
-    overflow: auto; 
-    display: flex;
-    justify-content: center;
+.login-form-all{
+    height: 80vh;
 }
 
-.login-form-all{
-    position: relative;
-    background-color: #fefefe;
-    border: 0.05rem solid black;
-    margin: auto;
-    padding: auto;
-    height: 85vh;
-    width: 91vw;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+.login-form-error{
+    display: flex;
+    align-items: center;
 }
 
 .login-form-title{
@@ -21,6 +12,7 @@
     background-color: #581845;
     color: #e8e8e8;
     margin-top: 2.3rem;
+    width: 100%;
 }
 
 .login-form-container{  
@@ -73,17 +65,24 @@
 }
 
 .login-form-b{
-    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .login-form-b>button{
     margin-left: 2rem;
     height: 2.5rem;
-    width: 5rem;
+    width: 7rem;
     font-weight: bold;
     border-radius: 1rem;
     background-color: #fefefe;
     border: 0.1rem solid black;
+}
+
+.login-form-b-a, .login-form-b-c{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .login-form-b-a:hover{
@@ -103,17 +102,18 @@
     box-shadow: none;
 }
 
+.login-form-user-invalid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.15rem solid rgba(143, 0, 12, 0.9);
+}
+
 /*Responsive Login*/
 
 @media (max-width: 844px){
-    .login-section{
-        display: flex;
-        justify-content: center;
-    }
-
     .login-form-all{
-        width: 94vw;
-        height: 88vh;
+        height: 80vh;
     }
     
     .login-form-container{ 

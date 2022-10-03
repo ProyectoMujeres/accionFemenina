@@ -10,20 +10,32 @@
     padding: 0.5rem;
 }
 
-.category-list>li{
-    border-bottom: 1.5px solid black;
-    color: white;
+.category-list-items{
+    background-color: transparent;
+    border-bottom: 1.5px solid black;   
     list-style-type: none;
     margin: 0.5rem;
 }
 
-.category-list>li:hover{
-    background-color: blanchedalmond; 
-    color: black;
+.category-list-items>li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    filter: brightness(0) invert(1);;
+}
+
+.category-list-items-img{
+    height: 1.5rem;  
+}
+
+.category-list-items:hover{
+    filter: brightness(0) invert(0);
+    border: 0.1rem solid black;
     border-radius: 0.2rem;
 }
 
-.category-list>li:active{
+.category-list-items:active{
     transform: translateY(2px);
 }
 
@@ -43,7 +55,7 @@
         font-size: 0.9rem;
     }
 
-    .category-list>li{
+    .category-list-items{
         margin: 0.2rem;
     }
 }

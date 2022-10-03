@@ -1,0 +1,113 @@
+.new-comment-container{
+    margin: 2rem 0;
+}
+
+.new-comment-container>h2{
+    text-align: center;
+    background-color: #581845;
+    color: #e8e8e8;
+}
+
+.new-comment-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.next-comment-content-b{
+    background-color: rgba(147,147,147, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+.next-comment-content{
+    background-color: #e8e8e8;
+    border-radius: 1rem;  
+    border: 0.1rem solid black;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0 1rem;
+}
+
+.next-comment-content>p{
+    align-self: flex-end;
+    margin-right: 1rem;
+}
+
+.next-comment-content>input{
+    height: 20vh;
+    width: 55vw;
+    text-indent: 1rem;
+    vertical-align: text-top;
+    background-color: transparent;
+    border: none;  
+    overflow-wrap: break-word;
+}
+
+.next-comment-content>input:focus{
+    outline: none;
+}
+
+.new-comment-b{
+    display: flex;
+    justify-content: flex-end;
+    gap: 5rem;
+}
+
+.new-comment-b>button{
+    margin-left: 2vw;
+    height: 2.5rem;
+    width: 7rem;
+    font-weight: bold;
+    border-radius: 1rem;
+    background-color: #fefefe;
+    border: 0.1rem solid black;
+}
+  
+.new-comment-b-p, .new-comment-b-c, .next-comment-content>p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.new-comment-b-p:hover{
+    background-color: rgba(50, 185, 50, 0.9);
+    transform: translateY(-3px);
+    box-shadow: 0.5rem 0.5rem rgba(112,31,88, 0.5);
+}
+   
+.new-comment-b-c:hover{
+    background-color: rgba(229, 50, 65, 0.9);
+    transform: translateY(-3px);
+    box-shadow: 0.5rem 0.5rem rgba(112,31,88, 0.5);
+}
+  
+.new-comment-b>button:active{
+    transform: translateY(-1px);
+    box-shadow: none;
+}
+
+/*Responsive NewComment*/
+
+@media (max-width: 1364px){
+    .new-comment-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .next-comment-content{
+        width: 80vw;
+    }
+}

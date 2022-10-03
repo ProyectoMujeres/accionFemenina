@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './MenuUser.css';
 import iconNavbar from'../../../assets/iconNavbar.png';
 import { Link } from 'react-router-dom';
 
-export default function MenuUser() {
+export default function MenuUser(){
+  const handleClick = () => {
+    localStorage.removeItem("user");
+    window.location.reload(false);
+  }
+
   return (
     <section>
       <ul className='menu-user-container '>
@@ -19,11 +24,11 @@ export default function MenuUser() {
             </p>
 
             <p>
-              <Link to='/mis-comentarios'> Mis comentarios </Link>
+              <Link to='/mis-publicaciones'> Mis comentarios </Link>
             </p>
 
             <p>
-              <Link to='/cerrar_sesión'> Cerrar sesion </Link>
+              <Link onClick={handleClick}>Cerrar sesion </Link>
             </p>
           </section>
         </li>

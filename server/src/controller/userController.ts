@@ -5,23 +5,23 @@ import userModel from '../model/userModel';
 const userController = {
     saveUser: async (req: Request, res: Response) => {
         try{
-            const {name, email, password, birthdate, rol, avatar, ...users}: iUser = req.body;
+            const {name, email, password, birthdate, role, avatar, ...users}: iUser = req.body;
 
-            if(!email  || !password){
-                res.status(404).send('Email or password missing');
+            if(!name || !email  || !password || !birthdate ){
+                res.status(404).send('Name, email, password or birthdate missing');
             }
             
-            const result = await userModel.saveUser({ name, email, password, birthdate, rol, avatar });
+            const result = await userModel.saveUser({ name, email, password, birthdate, role, avatar });
 
             result
-                ? res.status(200).json({ result: `A new user has been successfully created` + result }) 
+                ? res.status(200).json({ result: `A new user has been successfully created` + result })
                 : res.status(500).send('Failed to create a new user');
         } catch (error: any){
             res.status(400).send(error.message);
         }
     },
 
-    getOneUser: async (req: Request, res: Response) =>{
+    getOneUser: async (req: Request, res: Response) => {
         try{
             const param = req.params['user_id'];
 
@@ -35,9 +35,9 @@ const userController = {
         }
     },
 
-    getAllUsers:  async (req: Request, res: Response) => {
+    getUsers:  async (req: Request, res: Response) => {
         try{
-            const result: any = await userModel.getAllUsers();
+            const result: any = await userModel.getUsers();
         
             result
                 ? res.status(200).json({ result })
@@ -49,7 +49,7 @@ const userController = {
 
     modifUser: async (req: Request, res: Response) => {
         try{
-            const result = await userModel.modifUser(req.params.user_id, req.query)
+            const result = await userModel.modifUser(req.params.user_id, req.query);
 
             result
                 ? res.status(200).json({ result: `User ${req.params.user_id} has been modified correctly` })
@@ -59,7 +59,7 @@ const userController = {
         }
     },
 
-    deleteUser: async (req: Request, res: Response)=>{
+    deleteUser: async (req: Request, res: Response) => {
         try{
             const param = req.params.user_id;
 
@@ -71,7 +71,7 @@ const userController = {
             } catch (error: any){
                 res.status(400).send(error.message);
             }
-    }
-    
+    }   
 }
+
 export default userController;

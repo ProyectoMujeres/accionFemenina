@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './Avatar.css'
-import { TbWorldUpload } from 'react-icons/tb'
+import { ImFilePicture } from 'react-icons/im'
 import { IconContext } from 'react-icons/lib';
 import ChooseAvatar from './ChooseImage/ChooseAvatar';
 
@@ -25,13 +25,11 @@ export default function Avatar(){
 
   return (
     <section className='avatar-container'>
-      <section className='avatar-img'>
-        <img src={picture.croppedImg} alt='Avatar'/>
-      </section>
+      <img src={picture.croppedImg} alt='Avatar'className='avatar-img'/>
          
       <label htmlFor='search-avatar' className='search-avatar'>
         <IconContext.Provider value={{ size: '1.5rem' }}>
-          <TbWorldUpload/> 
+          <ImFilePicture/> 
         </IconContext.Provider>
 
         <p>Selecciona una imagen</p>

@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import './Profile.css'
-import ProfileSwitch from '../../component/ProfileSwitch/ProfileSwitch';
-import Avatar from '../../component/Avatar/Avatar';
+import ProfileSwitch from '../../../component/ProfileSwitch/ProfileSwitch';
+import Avatar from '../../../component/Avatar/Avatar';
+import { VscSaveAs } from 'react-icons/vsc';
+import{ MdOutlineCancel } from 'react-icons/md';
+import { IconContext } from 'react-icons';
 
 export default function Profile() {
   const [name, setName] = useState([]);
@@ -37,11 +40,12 @@ export default function Profile() {
                 <label htmlFor='password'>Contraseña:</label>
                 <input type='password' placeholder='123abc*' name='password' id='password' value={password} onChange={(e)=> setPassword(e.target.value)}/>
               </section>
-
-              <section className='profile-form-b'>
-                <button type='submit' className='profile-from-b-s'>Guardar</button>
-                <button type='cancel' className='profile-from-b-c'>Cancelar</button>
-              </section> 
+              <IconContext.Provider value={{ size: '1.5em', style: { margin: '0 0.1em' } }}>
+                <section className='profile-form-b'>
+                  <button type='submit' className='profile-from-b-s'><VscSaveAs/>Guardar</button>
+                  <button type='cancel' className='profile-from-b-c'><MdOutlineCancel/>Cancelar</button>
+                </section> 
+              </IconContext.Provider>
             </form>
           </section>
         </section>

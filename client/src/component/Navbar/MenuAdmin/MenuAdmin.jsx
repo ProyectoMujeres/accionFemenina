@@ -3,7 +3,12 @@ import './MenuAdmin.css';
 import iconNavbar from '../../../assets/iconNavbar.png';
 import { Link } from 'react-router-dom';
 
-export default function MenuAdmin() {
+export default function MenuAdmin(){
+  const handleClick = () => {
+    localStorage.removeItem("user");
+    window.location.reload(false);
+  }
+
   return (
     <section className='menu-admin'>
       <ul className='menu-admin-container '>
@@ -19,7 +24,7 @@ export default function MenuAdmin() {
             </p>
 
             <p>
-              <Link to='/cerrar-sesión'>Cerrar sesión</Link>
+              <Link onClick={handleClick}>Cerrar sesión</Link>
             </p>
           </section>
         </li>

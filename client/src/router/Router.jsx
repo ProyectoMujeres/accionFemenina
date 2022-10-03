@@ -1,10 +1,11 @@
 import { Routes, Route } from "react-router-dom";
-import NewPost from "../component/NewPost";
+import NewComment from "../component/NewComment/NewComment";
 import Comment from "../page/Comments/Comment";
 import FAQs from "../page/FAQs/FAQs";
 import Home from "../page/Home/Home";
 import Login from "../page/Login/Login";
-import Profile from "../page/Profile/Profile";
+import MyComments from "../page/UserPages/MyComments/MyComments";
+import Profile from "../page/UserPages/Profile/Profile";
 import Register from "../page/Register/Register";
 import { ProtectedRoute } from "../utils/ProtectedRoutes";
 
@@ -17,10 +18,11 @@ export default function Router() {
                 <Route exact path='/registro' element={<Register />}/>
                 <Route element={<ProtectedRoute />}>
                     <Route exact path='/mi-perfil' element={<Profile />}/>
+                    <Route exact path='/mis-publicaciones' element={<MyComments/>}/>
                 </Route> 
                 <Route exact path='/publicaciones' element={<Comment />}/>
                 <Route exact path='/preguntas-frecuentes' element={<FAQs />}/>
-                <Route exact path='/crear-publicacion' element={<NewPost/>}/>
+                <Route exact path='/crear-publicacion' element={<NewComment/>}/>     
             </Routes>
         </>
   )

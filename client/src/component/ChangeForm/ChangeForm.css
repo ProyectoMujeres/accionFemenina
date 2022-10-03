@@ -12,12 +12,19 @@
 }
 
 .btn-switch-form-b{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 15vh;
-    width: 10vw;
+    width: 15vw;
     border: 0.2em solid black;
     border-radius: 1rem;
     background-color: #fefefe;
     font-weight: bold;
+}
+
+.btn-switch-form-links{
+    text-decoration: none;
 }
 
 .btn-switch-form-b:hover{
