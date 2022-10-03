@@ -18,11 +18,12 @@ export default function Router() {
                 <Route exact path='/registro' element={<Register />}/>
                 <Route element={<ProtectedRoute />}>
                     <Route exact path='/mi-perfil' element={<Profile />}/>
-                    <Route exact path='/mis-publicaciones' element={<MyComments/>}/>
+                    <Route exact path='/mis-publicaciones' element={<MyComments/>}/> 
+                    <Route exact path='/crear-publicacion' element={<NewComment/>}/>   
                 </Route> 
                 <Route exact path='/publicaciones' element={<Comment />}/>
                 <Route exact path='/preguntas-frecuentes' element={<FAQs />}/>
-                <Route exact path='/crear-publicacion' element={<NewComment/>}/>     
+                 
             </Routes>
         </>
   )

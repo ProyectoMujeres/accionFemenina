@@ -49,20 +49,39 @@
     width: 5rem;
     height: 5rem;
     background-color: rgb(176, 176, 176);
+    border: 0.1rem solid black;
     border-radius: 100%;
+}
+
+.comment-post-info{
+    height: 100%;
+    background-color: rgba(176, 176, 176, 0.8);
+    margin-bottom: 0.8rem;
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+    border: 0.1rem solid black;
 }
 
 .comment-post-content{
     width: 67vw;
-    height: 10vh;
-    background-color: rgb(176, 176, 176);
-    border-radius: 0.5rem;
+    height: 100%;
 }
 
 .comment-post-name-date{
-    width: 40vw;
     height: 3vh;
-    background-color: rgb(176, 176, 176);
+    font-weight: bold;
+    border-bottom: 0.1rem solid rgba(160, 44, 125, 0.9); 
+}
+
+.comment-post-tags{
+    background-color: rgba(242, 202, 39, 0.5);
+    text-indent: 1rem;
+    font-style: italic;
+}
+
+.comment-post-tags>span{
+    color: rgb(160, 44, 125);
+    font-style: normal; 
 }
 
 .comment-link{

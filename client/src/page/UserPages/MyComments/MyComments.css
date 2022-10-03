@@ -22,6 +22,14 @@
   gap: 1rem;
 }
 
+.my-comments-create-section{
+  display: flex;
+  justify-content: center;
+  border-bottom: 0.2rem solid rgba(160, 44, 125, 0.9);
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
 .my-comments-posts-create-b{
   height: 4rem;
   width: 15rem;
@@ -55,24 +63,53 @@
   width: 5rem;
   height: 5rem;
   background-color: rgb(176, 176, 176);
+  border: 0.1rem solid black;
   border-radius: 100%;
+}
+
+.my-comments-post-info{
+  height: 100%;
+  background-color: rgb(210, 205, 205);
+  margin-bottom: 0.8rem;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  border: 0.1rem solid black;
 }
 
 .my-comments-post-content{
   width: 55vw;
-  height: 10vh;
-  background-color: rgb(176, 176, 176);
-  border-radius: 0.5rem;
+  height: 100%;
 }
 
 .my-comments-post-name-date{
   width: 40vw;
   height: 3vh;
-  background-color: rgb(176, 176, 176);
+  border-bottom: 0.1rem solid rgba(160, 44, 125, 0.9); 
+}
+
+.my-comments-post-tags{
+  background-color: rgba(242, 202, 39, 0.5);
+  text-indent: 1rem;
+  font-style: italic;
+}
+
+.my-comments-post-tags>span{
+  color: rgb(160, 44, 125);
+  font-style: normal; 
 }
 
 .my-comments-link{
   text-decoration: none;
+}
+
+.my-coments-empty{
+  width: 55vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-image: linear-gradient(#000 30%, transparent 0 70%,#000 0) 2;
+  padding: 2rem 0;
 }
 
 /*Responsive MyComments*/
@@ -100,5 +137,4 @@
     justify-content: space-between;
     align-items: center;
   }
-
 }

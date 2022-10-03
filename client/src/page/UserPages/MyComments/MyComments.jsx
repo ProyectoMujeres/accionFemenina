@@ -1,13 +1,25 @@
-import React from 'react'
-import './MyComments.css'
+import React, { useState } from 'react';
+import './MyComments.css';
 import ProfileSwitch from '../../../component/ProfileSwitch/ProfileSwitch';
 import Avatar from '../../../component/Avatar/Avatar';
-
-import { IoCreate } from 'react-icons/io5'
+import { CgHello } from 'react-icons/cg'
+import { IoCreate } from 'react-icons/io5';
 import { IconContext } from 'react-icons';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { postService } from '../../../utils/post.service';
 
 export default function MyComments() {
+  const [getUserPosts, setGetUserPosts] = useState([]);
+
+  useEffect(() => {
+    postService.getPostByUser()
+    .then((res) =>{
+      let usersPost= res;
+      setGetUserPosts(usersPost);
+    })
+  }, [setGetUserPosts]);
+
   return (
     <section>
       <section className='my-comments-all'>
@@ -20,7 +32,7 @@ export default function MyComments() {
           </section>
 
           <section className='my-commets-posts-section'> 
-            <section>
+            <section className='my-comments-create-section'>
               <Link to='/crear-publicacion' className='my-comments-link'> 
                 <button className='my-comments-posts-create-b'> 
                   <IconContext.Provider value={{size: '2.5em'}}>
@@ -30,18 +42,29 @@ export default function MyComments() {
                   </button>
               </Link>
             </section>
-            
-            <section className='my-comments-post'>
-              <img src ='' alt= ''/>
 
+            {getUserPosts.length > 0 ?
               <section>
-                <p className='my-comments-post-name-date'></p>
-                <p className='my-comments-post-content'></p>
-              </section>
-            </section>
+                { getUserPosts.map((post, i) => 
+                  <section key={i} className='my-comments-post'>
+                    <img src ={post.avatar} alt= 'avatarUser'/>
+
+                    <section className='my-comments-post-info'>
+                      <p className='my-comments-post-name-date'>{post.name} - {post.date}</p>
+                      <p className='my-comments-post-content'>{post.content}</p>
+                      <p className='my-comments-post-tags'>Tema(s) relacionado(s): <span>{post.type}</span></p>
+                    </section>
+                  </section>
+                )}
+              </section> 
+              :
+              <IconContext.Provider value={{ size: '5em', style: { margin: '0 1em', color: '#A02C7D' } }}>
+                <p className='my-coments-empty'><CgHello/>No tiene ninguna publicación hecha.</p>
+              </IconContext.Provider>  
+            }
           </section> 
-        </section>{/* se refiere: mycomments-content */}
-      </section>{/* se refiere: mycomments-all */}
+        </section>
+      </section>
     </section>
 )
 }

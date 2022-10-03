@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ChangeForm from '../../component/ChangeForm/ChangeForm';
 import './Login.css';
-import { IoClose, IoAlertCircleSharp } from 'react-icons/io5';
+import { IoAlertCircleSharp } from 'react-icons/io5';
 import{ MdOutlineCancel, MdOutlineCheckCircle } from 'react-icons/md';
 import { BiError } from 'react-icons/bi';
 import { IconContext } from 'react-icons';
@@ -46,6 +46,8 @@ export default function Login() {
         .then((res) => {
           setUser(res.data.token);
           localStorage.setItem('user', res.data.token);
+          localStorage.setItem('role', res.data.role);
+          localStorage.setItem('user_id', res.data.user_id);
           if (res.data.token) {
             window.open('/mi-perfil', '_self');
           }

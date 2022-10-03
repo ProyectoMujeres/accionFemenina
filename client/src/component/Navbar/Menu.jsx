@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 export const Menu = ({ user }) => {
     const [modalOpen, setModalOpen] = useState(false);
 
-    if (user && user.roles.includes("admin")){
-        return  <MenuAdmin/>
+    if (localStorage.getItem("user") && localStorage.getItem("role").includes("admin")){
+        return  <><MenuAdmin/> <MenuUser/></>
     } else if (localStorage.getItem("user")) {
         return <MenuUser/>
     } else{
