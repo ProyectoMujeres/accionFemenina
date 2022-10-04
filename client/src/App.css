@@ -1,5 +1,6 @@
 body{
-    font-family: Aref Ruqaa Ink;
+    font-family: Aref Ruqaa Ink, Arial, Helvetica, Roboto, Sans Serif; 
+    font-size: 25px;
     margin: 0;
     padding: 0;
     background-image: url("./assets/fondodepantalla(1).jpg");
