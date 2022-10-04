@@ -1,14 +1,18 @@
 import {Request, Response,  NextFunction} from 'express';
 import jwt from 'jsonwebtoken'
+import userModel from '../model/userModel';
 import { config } from '../services/config';
 
 const {secret} = config()
 
 const generateToken = async (req: Request, res: Response, next: NextFunction) => {
     try{
-        const token = await jwt.sign({ email: req.body.email }, secret, { expiresIn: '1h', algorithm: 'HS256' });
+        const user = await userModel.getUserByEmail(req.body.email);
+        const token = await jwt.sign({ email: user.email}, secret, { expiresIn: '1h', algorithm: 'HS256' });
         console.log(token)
         req.body.token = token;
+        req.body.user_id = user.user_id;
+        req.body.role= user.role;
         
         next()
     } catch (error: any){

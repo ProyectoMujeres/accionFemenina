@@ -1,13 +1,30 @@
-import React, { useReducer } from 'react'
+import React, { useEffect } from 'react'
 import SelectCategory from './SelectCategory/SelectCategory';
 import './NewComment.css'
 import { useState } from 'react';
 import { FiMoreHorizontal } from 'react-icons/fi';
 import{ MdOutlineCancel, MdAddComment } from 'react-icons/md';
 import { IconContext } from 'react-icons';
+import { postService } from '../../utils/post.service';
+import { categoryService } from '../../utils/categories.service';
 
 export default function NewComment(){
   const [contentFill, setContentFill] = useState('');
+  const [showTags, setShowTags] = useState(false);
+  const [categories, setCategories] = useState([]);
+  const [choosedTags, setChoosedTags] = useState([]);
+
+  const handleClick = (e) => {
+     setChoosedTags([e.target.value]);
+  }
+  
+  useEffect(()=>{
+    categoryService.getCategories()
+      .then((res)=>{ 
+        let tag = res.result;
+        setCategories(tag);
+      })
+  }, [setCategories]);
 
   const handleContentLimit = (e) => {
     let limit = 350;
@@ -15,12 +32,20 @@ export default function NewComment(){
     setContentFill(e.target.value.slice(0, limit));
   }
 
+  useEffect(() => {
+    postService.publishPost()
+    .then((res) =>{
+      let content = res;
+      setContentFill(content);
+    })
+  }, [])
+
   return (
     <section className='new-comment-container'>
       <h2>Crear publicación</h2>
 
       <section className='new-comment-section'>
-        <SelectCategory/>
+        <SelectCategory choosedTags={choosedTags} setShowTags={setShowTags} showTags={showTags} categories={categories} handleClick={handleClick}/>
         
         <section className='next-comment-content-b'>
           

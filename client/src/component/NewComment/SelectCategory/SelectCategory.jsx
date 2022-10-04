@@ -1,26 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { IconContext } from 'react-icons';
-import { MdOutlineKeyboardArrowDown } from 'react-icons/md'
-import GetInfo from '../../../utils/GetInfo';
-import './SelectCategory.css'
+import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
+import './SelectCategory.css';
 
-export default function SelectCategory(){
-  const [showTags, setShowTags] = useState(false);
-  const [categories, setCategories] = useState([]);
-  const [choosedTags, setChoosedTags] = useState([]);
-
-  const handleClick = (e) => {
-     setChoosedTags([e.target.value]);
-  }
-  
-  useEffect(()=>{
-    GetInfo.getCategories()
-      .then((res)=>{ 
-        let tag = res.result;
-        setCategories(tag)
-      })
-  }, [setCategories])
-  
+export default function SelectCategory({ choosedTags, setShowTags, showTags, categories, handleClick }){
     return(
       <section className='select-category-container'>
         {choosedTags ? 

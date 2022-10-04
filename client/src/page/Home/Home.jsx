@@ -15,7 +15,7 @@ export default function Home(){
                 <section className='home-mision-paragraph'>
                     <h1>MISIÓN</h1>
 
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <p>Queremos ayudar a mujeres extranjeras y de otras partes del territorio Español que llegan a Barcelona por primera vez, así como las que ya residen en la ciudad. Buscamos que se sientan acogidas y puedan acceder con mayor facilidad a la información de entidades que cuentan con los recursos necesarios para su integración y desarrollo. Con el fin de lograr este objetivo, hemos creado esta página web que sirve como una brújula para que ellas puedan orientarse en su camino, saber sus condiciones dentro de la comunidad y puedan obtener su autonomía o independencia en base del boca a boca y las redes sociales.</p>
                 </section>
                 
                 <img src ={fotomision} className="home-mision-img" alt= "misionImg"/>

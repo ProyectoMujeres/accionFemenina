@@ -1,18 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./Category.css";
-import GetInfo from '../../utils/GetInfo';
 
-export default function Category() {
-  const [categories, setCategories] = useState([]);
-  
-  useEffect(()=>{
-    GetInfo.getCategories()
-      .then((res)=>{ 
-        let tag = res.result;
-        setCategories(tag)
-      })
-  }, [setCategories])
-
+export default function Category({ categories }) {
   return (
     <section className="category-container">
       <ul  className="category-list">
