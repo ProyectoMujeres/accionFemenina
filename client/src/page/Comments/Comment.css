@@ -88,6 +88,17 @@
     text-decoration: none;
 }
 
+.comment-post-empty{
+    text-align: center;
+    width: 67vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-image: linear-gradient(#000 30%, transparent 0 70%,#000 0) 2;
+    padding: 2rem 0;
+}
+
 /*Responsive Comment*/
 
 @media (max-width: 1364px){

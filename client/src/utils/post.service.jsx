@@ -6,7 +6,7 @@ export const postService ={
         return result.data;
     }, 
 
-    async publishPost(user_id){
+    async publishPost(){
         const result = await axios.post(`${process.env.REACT_APP_API_URL}/posts/${localStorage.getItem('user_id')}`, { headers: { authorization: `Bearer ${localStorage.getItem("user")}` }});
         return result.data;
     },

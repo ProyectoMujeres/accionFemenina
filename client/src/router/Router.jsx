@@ -8,9 +8,8 @@ import MyComments from "../page/UserPages/MyComments/MyComments";
 import Profile from "../page/UserPages/Profile/Profile";
 import Register from "../page/Register/Register";
 import { ProtectedRoute } from "../utils/ProtectedRoutes";
-import Logistic from "../page/AdminPages/Logistic/Logistic";
-import UsersPosts from "../page/AdminPages/UsersPosts/UsersPosts";
-import CategoryTypes from "../page/AdminPages/Categories/CategoryTypes";
+import NotFound from "../page/NotFound/NotFound";
+import Logistic from "../page/AdminPages/Logistic";
 
 export default function Router() {
     return(
@@ -24,15 +23,12 @@ export default function Router() {
                     <Route exact path='/mis-publicaciones' element={<MyComments/>}/> 
                     <Route exact path='/crear-publicacion' element={<NewComment/>}/>   
                 </Route> 
-
                 <Route element={<ProtectedRoute isAllowed={!!localStorage.getItem('user') && localStorage.getItem('role')}/>}>
                    <Route exact path='/edicion' element={<Logistic/>}/>
-                   <Route exact path='/publicaciones-de-usuarias' element={<UsersPosts/>}/> 
-                   <Route exact path='/tipos-de-categorias' element={<CategoryTypes/>}/> 
                 </Route> 
                 <Route exact path='/publicaciones' element={<Comment />}/>
                 <Route exact path='/preguntas-frecuentes' element={<FAQs />}/>
-                 
+                <Route exact path='*' element={<NotFound/>}/>
             </Routes>
         </>
   )

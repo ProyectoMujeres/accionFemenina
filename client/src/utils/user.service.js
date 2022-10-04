@@ -14,7 +14,11 @@ export const userService = {
     
     async getUsers(){
         const result = await axios.get(`${process.env.REACT_APP_API_URL}/admin/users`, { headers: { authorization: `Bearer ${localStorage.getItem("user")}`}});
-        console.log(result, result.data)
         return result.data;
-    }   
+    },
+    
+    async getUser(){
+        const result = await axios.get(`${process.env.REACT_APP_API_URL}/users/${localStorage.getItem('user_id')}`, { headers: { authorization: `Bearer ${localStorage.getItem("user")}`}});
+        return result.data;
+    }
 }

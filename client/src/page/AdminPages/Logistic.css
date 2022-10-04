@@ -1,3 +1,7 @@
+.logistic-section{
+    min-height: 53.1vh;
+}
+
 .logistic-container{
     display: flex;
     flex-direction: column;
@@ -23,6 +27,7 @@
     border-bottom: 0.1rem solid black;
     background-color: transparent;
     font-weight: bold;
+    font-size: 1.2rem;
     filter: brightness(0) invert(1);
 }
 

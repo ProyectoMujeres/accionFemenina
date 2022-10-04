@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useReducer } from 'react'
 import SelectCategory from './SelectCategory/SelectCategory';
 import './NewComment.css'
 import { useState } from 'react';
@@ -13,10 +13,6 @@ export default function NewComment(){
   const [showTags, setShowTags] = useState(false);
   const [categories, setCategories] = useState([]);
   const [choosedTags, setChoosedTags] = useState([]);
-
-  const handleClick = (e) => {
-     setChoosedTags([e.target.value]);
-  }
   
   useEffect(()=>{
     categoryService.getCategories()
@@ -26,6 +22,10 @@ export default function NewComment(){
       })
   }, [setCategories]);
 
+  const handleClick = (e) => {
+     setChoosedTags([e.target.value]);
+  }
+  
   const handleContentLimit = (e) => {
     let limit = 350;
 
@@ -52,7 +52,7 @@ export default function NewComment(){
           <IconContext.Provider value={{ size: '1.5em', style: { margin: '0 0.1em', color: '#A02C7D' } }}>
             <section>
               <label htmlFor='next-comment-content' className='next-comment-content'>
-                <input type='text' id='next-comment-content' value={contentFill} onChange={handleContentLimit}placeholder='Escribe aquí...'/>
+                <input type='text' id='next-comment-content' value={contentFill} onChange={handleContentLimit} placeholder='Escribe aquí...'/>
                 <p>{contentFill.length}/350<FiMoreHorizontal/></p>
               </label>
             </section>

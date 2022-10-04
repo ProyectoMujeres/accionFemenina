@@ -17,8 +17,8 @@ export default function UsersInfo(){
     return (
       <section>
         <section>
-            <table className='category-types-table'>
-                <tr className='category-types-titles'>
+            <table className='users-info-table'>
+                <tr className='users-info-titles'>
                     <th>Id</th>
                     <th>Avatar</th>
                     <th>Nombre</th>
@@ -29,9 +29,9 @@ export default function UsersInfo(){
 
                 <tbody>
                     {uInfo.map((ui, i) =>
-                        <tr key={i} className='category-types-info'>
+                        <tr key={i} className='users-info-info'>
                             <td>{ui.user_id}</td>
-                            <td><img src ={ui.avatar} alt= 'avatarUser' className='category-types-img'/></td>
+                            <td><img src ={ui.avatar} alt= 'avatarUser' className='users-info-img'/></td>
                             <td>{ui.name}</td>
                             <td>{ui.email}</td>
                             <td>{ui.role}</td>

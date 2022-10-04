@@ -2,7 +2,8 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import './Comment.css' ;
 import Search from '../../component/Search/Search';
 import Category from '../../component/Category/Category';
-import { IoCreate } from 'react-icons/io5'
+import { CgHello } from 'react-icons/cg';
+import { IoCreate } from 'react-icons/io5';
 import { IconContext } from 'react-icons';
 import { Link } from 'react-router-dom';
 import { postService } from '../../utils/post.service';
@@ -63,19 +64,25 @@ export default function Comment() {
       <section className='comment-filter-post-section'>
         <Category categories={categories}/>
 
-        <section>
-          {filterPosts.map((pp, i) =>
-            <section key={i} className='comment-post'>
-              <img src ={pp.avatar} alt= 'avatarUser'/>
+        {filterPosts.length > 0 ?
+          <section>
+            {filterPosts.map((pp, i) =>
+              <section key={i} className='comment-post'>
+                <img src ={pp.avatar} alt= 'avatarUser'/>
 
-              <section className='comment-post-info'>
-                <p className='comment-post-name-date'>{pp.name} - {pp.date}</p>
-                <p className='comment-post-content'>{pp.content}</p>
-                <p className='comment-post-tags'>Tema(s) relacionado(s): <span>{pp.type}</span></p>
+                <section className='comment-post-info'>
+                  <p className='comment-post-name-date'>{pp.name} - {pp.date}</p>
+                  <p className='comment-post-content'>{pp.content}</p>
+                  <p className='comment-post-tags'>Tema(s) relacionado(s): <span>{pp.type}</span></p>
+                </section>
               </section>
-            </section>
-          )}
-        </section>
+            )}
+          </section>
+          :
+          <IconContext.Provider value={{ size: '5em', style: { margin: '0 1em', color: '#A02C7D' } }}>
+            <p className='comment-post-empty'><CgHello/>Lo sentimos, no se ha encontrado ninguna publicación relacionada.</p>
+          </IconContext.Provider>  
+        }
       </section>
     </section>
   )

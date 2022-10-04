@@ -9,7 +9,10 @@
 }
 
 .profile-form-welcome{
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .profile-form-container{  

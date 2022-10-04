@@ -111,6 +111,7 @@
   border: 1px solid black;
   border-image: linear-gradient(#000 30%, transparent 0 70%,#000 0) 2;
   padding: 2rem 0;
+  text-align: center;
 }
 
 /*Responsive MyComments*/
