@@ -35,13 +35,14 @@ const postController = {
                         const result = await postModel.savePost({content, category_id, user_id});
 
                          result
-                                ? res.status(201).json({ result: result.rows})
+                                ? res.status(201).json({ result: result.row})
                                 : res.status(500).send('No se pudo crear una nueva post');
                 }catch (error: any){
                         res.status(400).send(error.message);
                 }
         },
 
+       
         // modifPost: async (req: Request,res: Response) => {
         //         try{
         //                 const param = req.params['user_id'];

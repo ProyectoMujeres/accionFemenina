@@ -1,5 +1,5 @@
 import {Request,Response} from 'express';
-import categoryModel from '../model/categoryModel'
+import categoryModel from '../model/CategoryModel'
 import iCategory from '../model/interface/iCategory';
 
 const categoryController = {

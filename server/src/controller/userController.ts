@@ -1,6 +1,7 @@
 import {Request,Response} from 'express';
 import {iUser} from '../model/interface/iUser';
 import userModel from '../model/userModel';
+import jwt from './categoryController'; 
 
 const userController = {
     saveUser: async (req: Request, res: Response) => {
@@ -73,5 +74,7 @@ const userController = {
             }
     }   
 }
+
+
 
 export default userController;
