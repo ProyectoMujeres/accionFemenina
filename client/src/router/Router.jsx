@@ -8,6 +8,9 @@ import MyComments from "../page/UserPages/MyComments/MyComments";
 import Profile from "../page/UserPages/Profile/Profile";
 import Register from "../page/Register/Register";
 import { ProtectedRoute } from "../utils/ProtectedRoutes";
+import Logistic from "../page/AdminPages/Logistic/Logistic";
+import UsersPosts from "../page/AdminPages/UsersPosts/UsersPosts";
+import CategoryTypes from "../page/AdminPages/Categories/CategoryTypes";
 
 export default function Router() {
     return(
@@ -16,10 +19,16 @@ export default function Router() {
                 <Route exact path='/' element={<Home/>}/>
                 <Route exact path='/iniciar-sesion' element={<Login />}/>
                 <Route exact path='/registro' element={<Register />}/>
-                <Route element={<ProtectedRoute />}>
+                <Route element={<ProtectedRoute  isAllowed={localStorage.getItem('user')}/>}>
                     <Route exact path='/mi-perfil' element={<Profile />}/>
                     <Route exact path='/mis-publicaciones' element={<MyComments/>}/> 
                     <Route exact path='/crear-publicacion' element={<NewComment/>}/>   
+                </Route> 
+
+                <Route element={<ProtectedRoute isAllowed={!!localStorage.getItem('user') && localStorage.getItem('role')}/>}>
+                   <Route exact path='/edicion' element={<Logistic/>}/>
+                   <Route exact path='/publicaciones-de-usuarias' element={<UsersPosts/>}/> 
+                   <Route exact path='/tipos-de-categorias' element={<CategoryTypes/>}/> 
                 </Route> 
                 <Route exact path='/publicaciones' element={<Comment />}/>
                 <Route exact path='/preguntas-frecuentes' element={<FAQs />}/>

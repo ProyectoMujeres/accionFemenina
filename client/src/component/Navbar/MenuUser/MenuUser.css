@@ -46,3 +46,9 @@
 .menu-user-link>p>a:hover{
   color: black;
 }
+
+.menu-user-l-i{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

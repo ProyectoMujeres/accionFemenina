@@ -8,6 +8,8 @@ import { IconContext } from 'react-icons';
 export default function ProfileSwitch(){
     const handleClick = () => {
         localStorage.removeItem("user");
+        localStorage.removeItem("role");
+        localStorage.removeItem("user_id");
         window.location.reload(false);
     }
 

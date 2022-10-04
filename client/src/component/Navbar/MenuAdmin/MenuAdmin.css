@@ -46,3 +46,9 @@
 .menu-admin-links>p>a:hover{
   color: black;
 }  
+
+.menu-admin-l-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
