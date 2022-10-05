@@ -6,6 +6,7 @@ import ChooseAvatar from './ChooseImage/ChooseAvatar';
 
 
 export default function Avatar(){  
+  //Estructura de los valores iniciales
   const [picture, setPicture] = useState({
     cropperOpen: false,
     img: null,
@@ -14,6 +15,7 @@ export default function Avatar(){
     '../../assets/iconNavbar.png'
   });
 
+  //Capta y trae los cambios que se efectuan en los valores iniciales
   const handleFileChange = (e) => {
     let url = URL.createObjectURL(e.target.files[0]);
     setPicture({

@@ -19,7 +19,7 @@ describe('POST/login', ()=>{
             .post('/login')
             .send({
                     email: "lau@mail.com",
-                    password: "1234"
+                    password: "12345"
         });
         expect(response.status).toEqual(200);
         expect(response.headers['content-type']).toContain('application/json');

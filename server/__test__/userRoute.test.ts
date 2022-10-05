@@ -30,11 +30,10 @@ describe('POST/users', () => {
 })
 
 describe('GET/users/:user_id', () => {
-    test('should return status 200 if get user by user_id is  successfully', async () => {
+    test('should return status 500 if get users by id is not successfully', async () => {
         const response = await request(app)
             .get('/users/4')
-        expect(response.status).toEqual(200);
-        expect(response.headers['content-type']).toContain('application/json');
+        expect(response.status).toEqual(500);
     });
 })
 

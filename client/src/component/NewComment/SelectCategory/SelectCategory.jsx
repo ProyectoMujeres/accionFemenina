@@ -3,7 +3,7 @@ import { IconContext } from 'react-icons';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import './SelectCategory.css';
 
-export default function SelectCategory({ setShowTags, showTags, categories, handleClick }){
+export default function SelectCategory({ setShowTags, showTags, categories, handleClick }){ //Se pasan como argumentos los props
     return(
       <section className='select-category-container'>
         <IconContext.Provider value={{ size: '2.5em' }}>

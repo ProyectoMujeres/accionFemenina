@@ -4,13 +4,15 @@ import { MdEdit, MdDelete } from 'react-icons/md';
 import { userService } from '../../../utils/user.service';
 
 export default function UsersInfo(){
+    //El primer valor uInfo tendrá por defecto un array vacio, o lo que se traiga su "modificador" setUInfo
     const [uInfo, setUInfo] = useState([]);
   
+    //UserEffect que utiliza el indicador .get para obtener la información de la tabla "Users" de nuestra base de datos
     useEffect(()=>{
         userService.getUsers()
         .then((res)=>{ 
             let tag = res.result;
-            setUInfo(tag)
+            setUInfo(tag) //El setUInfo toma los datos obtenidos de la base de datos
         })
     }, [setUInfo])
   
@@ -28,6 +30,7 @@ export default function UsersInfo(){
                 </tr>
 
                 <tbody>
+                      {/* Crea una fila por cada bloque de información */}
                     {uInfo.map((ui, i) =>
                         <tr key={i} className='users-info-info'>
                             <td>{ui.user_id}</td>

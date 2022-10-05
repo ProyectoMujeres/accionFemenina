@@ -4,13 +4,15 @@ import './UsersPosts.css';
 import { MdEdit, MdDelete } from 'react-icons/md';
 
 export default function UsersPosts(){
+    //El primer valor uPosts tendrá por defecto un array vacio, o lo que se traiga su "modificador" setUPosts
     const [uPosts, setUPosts] = useState([]);
     
+     //UserEffect que utiliza el indicador .get para obtener la información de la tabla "Posts" de nuestra base de datos
     useEffect(() => {
       postService.getPosts()
         .then((res) => { 
           let posts = res;
-          setUPosts(posts);
+          setUPosts(posts); //El setUPosts toma los datos obtenidos de la base de datos
         })
     }, [setUPosts]);  
   
@@ -29,6 +31,7 @@ export default function UsersPosts(){
                 </tr>
 
                 <tbody>
+                    {/* Crea una fila por cada bloque de información */}
                     {uPosts.map((up, i) =>
                         <tr key={i} className='users-posts-info'>
                             <td>{up.post_id}</td>

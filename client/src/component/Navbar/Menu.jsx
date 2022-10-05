@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import iconNavbar from'../../assets/iconNavbar.png';
 import MenuAdmin from './MenuAdmin/MenuAdmin';
 import MenuUser from './MenuUser/MenuUser';
 import { Link } from 'react-router-dom';
 
-export const Menu = ({ user }) => {
-    const [modalOpen, setModalOpen] = useState(false);
-
+export const Menu = () => {
+    //Condicional que retornara un menu en función del estado (logeado o no) del usuario y su role 
     if (localStorage.getItem("user") && localStorage.getItem("role").includes("admin")){
         return  <><MenuAdmin/> <MenuUser/></>
     } else if (localStorage.getItem("user")) {

@@ -5,6 +5,7 @@ import './ChooseAvatar.css'
 export default function ChooseAvatar({picture, setPicture}){
     let editor = '';
 
+    //HandleSlider hace el ajuste del ancho y alto de la imagen seleccionada para el Avatar antes de guardarla
     const handleSlider = (e) => {
         setPicture({
             ...picture,
@@ -12,6 +13,7 @@ export default function ChooseAvatar({picture, setPicture}){
         });
     };
 
+    //HandleCancel cierra el preview de la selección de la imagen sin guardar
     const handleCancel = () => {
         setPicture({
             ...picture,
@@ -19,10 +21,12 @@ export default function ChooseAvatar({picture, setPicture}){
         });
     };
 
+    //Contenedor donde toma y se visualiza la imagen ingresada a ajustar
     const setEditorRef = (ed) => {
         editor = ed;
     };
 
+    //HandleSave guarda la imagen que se acepta guardar para el avatar
     const handleSave = (e) => {
         if (setEditorRef) {
         const canvasScaled = editor.getImageScaledToCanvas();

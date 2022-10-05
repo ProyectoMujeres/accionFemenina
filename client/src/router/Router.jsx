@@ -18,11 +18,15 @@ export default function Router() {
                 <Route exact path='/' element={<Home/>}/>
                 <Route exact path='/iniciar-sesion' element={<Login />}/>
                 <Route exact path='/registro' element={<Register />}/>
+
+                {/* Protege rutas de los usuarios */}
                 <Route element={<ProtectedRoute  isAllowed={localStorage.getItem('user')}/>}>
                     <Route exact path='/mi-perfil' element={<Profile />}/>
                     <Route exact path='/mis-publicaciones' element={<MyComments/>}/> 
                     <Route exact path='/crear-publicacion' element={<NewComment/>}/>   
                 </Route> 
+                
+                {/* Protege rutas de los usuarios con role "admin" */}
                 <Route element={<ProtectedRoute isAllowed={!!localStorage.getItem('user') && localStorage.getItem('role')}/>}>
                    <Route exact path='/edicion' element={<Logistic/>}/>
                 </Route> 
