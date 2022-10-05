@@ -68,7 +68,7 @@ export default function Comment() {
           <section>
             {filterPosts.map((pp, i) =>
               <section key={i} className='comment-post'>
-                <img src ={pp.avatar} alt= 'avatarUser'/>
+                <img src ={pp.avatar} alt= 'avatar'/>
 
                 <section className='comment-post-info'>
                   <p className='comment-post-name-date'>{pp.name} - {pp.date}</p>

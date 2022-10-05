@@ -27,7 +27,7 @@ export default function NewComment(){
   }
   
   const handleContentLimit = (e) => {
-    let limit = 350;
+    let limit = 550;
 
     setContentFill(e.target.value.slice(0, limit));
   }
@@ -53,7 +53,7 @@ export default function NewComment(){
             <section>
               <label htmlFor='next-comment-content' className='next-comment-content'>
                 <input type='text' id='next-comment-content' value={contentFill} onChange={handleContentLimit} placeholder='Escribe aquí...'/>
-                <p>{contentFill.length}/350<FiMoreHorizontal/></p>
+                <p>{contentFill.length}/550<FiMoreHorizontal/></p>
               </label>
             </section>
           </IconContext.Provider>

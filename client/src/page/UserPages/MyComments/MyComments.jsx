@@ -47,7 +47,7 @@ export default function MyComments() {
               <section>
                 { getUserPosts.map((post, i) => 
                   <section key={i} className='my-comments-post'>
-                    <img src ={post.avatar} alt= 'avatarUser'/>
+                    <img src ={post.avatar} alt= 'avatar'/>
 
                     <section className='my-comments-post-info'>
                       <p className='my-comments-post-name-date'>{post.name} - {post.date}</p>

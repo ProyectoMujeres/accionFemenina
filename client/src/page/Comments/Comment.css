@@ -51,6 +51,9 @@
     background-color: rgb(176, 176, 176);
     border: 0.1rem solid black;
     border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .comment-post-info{
