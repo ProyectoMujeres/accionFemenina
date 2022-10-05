@@ -34,7 +34,7 @@ export default function UsersInfo(){
                     {uInfo.map((ui, i) =>
                         <tr key={i} className='users-info-info'>
                             <td>{ui.user_id}</td>
-                            <td><img src ={ui.avatar} alt= 'avatarUser' className='users-info-img'/></td>
+                            <td><img src ={ui.avatar} alt= 'avatar' className='users-info-img'/></td>
                             <td>{ui.name}</td>
                             <td>{ui.email}</td>
                             <td>{ui.role}</td>
